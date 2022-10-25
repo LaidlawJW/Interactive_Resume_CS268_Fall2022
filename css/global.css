@@ -14,7 +14,7 @@ body {
     max-width: 100%;
 }
 
-/* Sets background color of corresponding page in navbar */
+/* Sets background color of current page's name in navbar directory */
 .active {
     background-color: rgb(170,135,219)
 }
@@ -76,8 +76,20 @@ body {
     position: absolute;
     height: 75vh;
     width: 100%;
-    background-color: orange;
     top: 25vh;
+    display: flex;
+}
+
+#content-main {
+    display: block;
+    margin: auto;
+    height: inherit;
+}
+
+#content-sidebar {
+    display: block;
+    margin: auto;
+    height: inherit;
 }
 /* -------------------------------------------------------------------------- */
 
@@ -85,11 +97,72 @@ body {
 
 
 /* ----------------------------- Footer Styling ----------------------------- */
-#site-footer {
+#footer-container {
     position: absolute;
-    height: 15vh;
+    height: 33vh;
     width: 100%;
     top: 100vh;
-    background-color: blue;
+    background-color: rgb(52, 46, 63);
+    display: flex;
+}
+
+#links-container {
+    height: inherit;
+    width: 100px;
+}
+
+#footer-container > div {
+    height: 212.5px;
+    padding: 40px 150px;
+}
+
+#footer-container > div > h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(219, 219, 219);
+    width: max-content;
+}
+
+#footer-container > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px;
+    width: 100%;
+}
+
+#footer-container > div > ul > li > a {
+    color: rgb(102, 180, 190);
+    text-decoration: none;
+}
+
+#footer-report > ul > li {
+    padding: 5px 0px;
+    width: max-content;
+}
+
+#footer-nav > ul > li {
+    padding: 5px 0px;
+    width: max-content;
+}
+
+#footer-report {
+    width: 80px;
+}
+
+#footer-infocard {
+    width: 200px;
+}
+
+#footer-infocard > p {
+    color: rgb(161, 161, 161);
+    width: 300px;
+}
+
+#footer-nav {
+    width: 80px;
+}
+
+#footer-contact > ul > li {
+    padding: 3px 0px;
+    color: rgb(143, 143, 143);
 }
 /* -------------------------------------------------------------------------- */
