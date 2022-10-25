@@ -14,73 +14,82 @@ body {
     max-width: 100%;
 }
 
-/* ------------ Navbar Styling ------------ */
-#site-nav {
-    position: absolute;
-    height: 10vh;
-    width: 100%;
-    background-color: green;
+/* Sets background color of corresponding page in navbar */
+.active {
+    background-color: rgb(170,135,219)
 }
 
-#site-nav > ul {
+/* ----------------------------- Navbar Styling ----------------------------- */
+#site-nav {
+    position: absolute;
+    height: 5vh;
+    width: 100%;
+}
+
+#nav-container {
+    display: flex;
+    width: 70%;
+    height: inherit;
+    margin: auto;
+}
+
+#nav-text-container > p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;
+    font-weight: bolder;
+    width: max-content;
+    padding: 13px 16px;
+    margin: 0;
+}
+
+#nav-container > ul {
     list-style-type: none;
     top: 0;
     margin: 0;
     padding: 0;
-}
-
-#site-nav > ul > li {
-    text-decoration: underline;
-}
-
-#site-nav > ul > li > a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#site-nav > ul > li a:hover {
-    background-color: rgb(170, 42, 196);
-}
-/* ---------------------------------------- */
-
-
-
-
-/* ------------ Header Styling ------------ */
-#site-header {
-    position: absolute;
-    height: 20vh;
     width: 100%;
-    background-color: red;
-    top: 10vh;
+    height: inherit;
 }
 
-#site-header > h1 {
-    text-align: center;
+#nav-container > ul > li {
+    float: right;
 }
-/* ---------------------------------------- */
+
+#nav-container > ul > li > a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+#nav-container > ul > li a:hover {
+    background-color: pink;
+}
+/* -------------------------------------------------------------------------- */
 
 
 
 
-/* ------------ Content Styling ------------ */
+/* ---------------------------- Content Styling ----------------------------- */
 #site-content {
     position: absolute;
     height: 75vh;
     width: 100%;
     background-color: orange;
-    top: 30vh;
+    top: 25vh;
 }
-/* ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
 
 
 
 
-/* ------------ Footer Styling ------------ */
+/* ----------------------------- Footer Styling ----------------------------- */
 #site-footer {
     position: absolute;
     height: 15vh;
     width: 100%;
-    top: 85vh;
+    top: 100vh;
     background-color: blue;
 }
-/* ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
