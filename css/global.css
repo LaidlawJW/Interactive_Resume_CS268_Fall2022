@@ -1,4 +1,13 @@
-/* Global styling for all pages on Joe Burns' website */
+/* Global styling for all pages on the website */
+
+#book {
+    position: absolute;
+    float: left;
+    justify-content: left;
+    justify-items: left;
+    width: 3vw;
+    height: 5vh;
+}
 
 body {
     margin: 0;
@@ -16,7 +25,7 @@ body {
 
 /* Sets background color of current page's name in navbar directory */
 .active {
-    background-color: rgb(170,135,219)
+    background-color: rgb(170, 135, 219)
 }
 
 /* ----------------------------- Navbar Styling ----------------------------- */
@@ -28,25 +37,29 @@ body {
 
 #nav-container {
     display: flex;
-    width: 70%;
-    height: inherit;
+    width: 100%;
+    height: 2vh;
     margin: auto;
 }
 
+/*Affects text labels of navbar that aren't links*/
 #nav-text-container > p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 130%;
     font-weight: bolder;
-    width: max-content;
-    padding: 13px 16px;
+    width: auto;
+    height: auto;
+    padding: 5px 5px;
     margin: 0;
+    position: absolute;
+    left: 50px;
 }
 
 #nav-container > ul {
     list-style-type: none;
-    top: 0;
-    margin: 0;
-    padding: 0;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     height: inherit;
 }
@@ -57,7 +70,8 @@ body {
 
 #nav-container > ul > li > a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 15px 16px;
+    height: 3vh;
+    padding: 1vh;
     text-decoration: none;
     display: block;
     color: black;
@@ -66,6 +80,7 @@ body {
 #nav-container > ul > li a:hover {
     background-color: pink;
 }
+
 /* -------------------------------------------------------------------------- */
 
 
@@ -91,6 +106,7 @@ body {
     margin: auto;
     height: inherit;
 }
+
 /* -------------------------------------------------------------------------- */
 
 
@@ -98,33 +114,40 @@ body {
 
 /* ----------------------------- Footer Styling ----------------------------- */
 #footer-container {
-    position: absolute;
-    height: 33vh;
+    position: relative;
+    height: 44vh;
     width: 100%;
     top: 100vh;
     background-color: rgb(52, 46, 63);
     display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #links-container {
     height: inherit;
     width: 100px;
+    display: flex;
 }
 
 #footer-container > div {
     height: 212.5px;
-    padding: 40px 150px;
+    padding-right: 150px;
+    margin: 0px;
 }
 
 #footer-container > div > h4 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(219, 219, 219);
-    width: max-content;
+    width: 15vw;
 }
 
 #footer-container > div > ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0px;
     padding: 0px 0px;
     width: 100%;
 }
@@ -135,7 +158,7 @@ body {
 }
 
 #footer-report > ul > li {
-    padding: 5px 0px;
+    padding: 0px 0px;
     width: max-content;
 }
 
@@ -164,5 +187,7 @@ body {
 #footer-contact > ul > li {
     padding: 3px 0px;
     color: rgb(143, 143, 143);
+    flex-wrap: wrap;
 }
+
 /* -------------------------------------------------------------------------- */
