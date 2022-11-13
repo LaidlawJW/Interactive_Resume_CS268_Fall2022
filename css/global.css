@@ -1,3 +1,33 @@
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px) {
+    
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) {
+    
+}
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) {
+    
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px) {
+    
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+    
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+    
+}
+
 /* Global styling for all pages on the website */
 
 #book {
@@ -25,14 +55,18 @@ body {
 
 /* Sets background color of current page's name in navbar directory */
 .active {
-    background-color: rgb(170, 135, 219)
+    background-color: rgb(4, 132, 252)
 }
 
 /* ----------------------------- Navbar Styling ----------------------------- */
 #site-nav {
-    position: absolute;
+    position: fixed;
+    top: 0px;
     height: 5vh;
     width: 100%;
+    background-color: white;
+    /* put in front of all other elements */
+    z-index: 99;
 }
 
 #nav-container {
@@ -40,6 +74,7 @@ body {
     width: 100%;
     height: 2vh;
     margin: auto;
+    background-color: white;
 }
 
 /*Affects text labels of navbar that aren't links*/
@@ -120,11 +155,11 @@ body {
     top: 100vh;
     background-color: rgb(52, 46, 63);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-items: center;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #links-container {
