@@ -1,47 +1,19 @@
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (min-width:320px) {
-    
-}
-
-/* smartphones, Android phones, landscape iPhone */
-@media (min-width:480px) {
-    
-}
-
-/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@media (min-width:600px) {
-    
-}
-
-/* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:801px) {
-    
-}
-
-/* big landscape tablets, laptops, and desktops */
-@media (min-width:1025px) {
-    
-}
-
-/* hi-res laptops and desktops */
-@media (min-width:1281px) {
-    
-}
-
 /* Global styling for all pages on the website */
-
-#book {
-    position: absolute;
-    float: left;
-    justify-content: left;
-    justify-items: left;
-    width: 3vw;
-    height: 5vh;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
+    position: position: relative;
     margin: 0;
     padding: 0;
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 55vh; /* Make large enough to prevent footer from obscuring stuff */
 }
 
 #page {
@@ -59,6 +31,24 @@ body {
 }
 
 /* ----------------------------- Navbar Styling ----------------------------- */
+#book {
+    position: fixed;
+    float: left;
+    justify-content: left;
+    justify-items: left;
+    width: 40px;
+    height: 30px;
+}
+
+#threeline {
+    height: 20px;
+    width: auto;
+    margin-top: 5px;
+    float: right;
+    padding: 0px;
+    display: none;
+}
+
 #site-nav {
     position: fixed;
     top: 0px;
@@ -90,6 +80,7 @@ body {
     left: 50px;
 }
 
+/*The list of stuff on the right side of navbar*/
 #nav-container > ul {
     list-style-type: none;
     top: 0px;
@@ -97,23 +88,41 @@ body {
     padding: 0px;
     width: 100%;
     height: inherit;
-}
-
-#nav-container > ul > li {
     float: right;
 }
 
+/*The items in the navbar (this part of the css shouldn't be needed*/
+/*
+#nav-container > ul > li {
+    float: right;
+}
+*/
+
+/*stylize the nav links*/
 #nav-container > ul > li > a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 3vh;
     padding: 1vh;
     text-decoration: none;
     display: block;
+    float: right;
     color: black;
 }
 
+/*stylize the nav links when cursors hovers over them*/
 #nav-container > ul > li a:hover {
     background-color: pink;
+}
+
+/*make navbar collapse at a certain width, show threeline.png*/
+@media (max-width:975px) {
+    #nav-container > ul > li a {
+        display: none;
+    }
+
+    #threeline {
+        display: inline-block;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -122,12 +131,17 @@ body {
 
 
 /* ---------------------------- Content Styling ----------------------------- */
+p {
+    width: auto;
+    height: auto;
+}
+
 #site-content {
-    position: absolute;
+    padding-top: 20px;
     height: 75vh;
     width: 100%;
     top: 25vh;
-    display: flex;
+    display: block;
 }
 
 #content-main {
@@ -136,11 +150,11 @@ body {
     height: inherit;
 }
 
-#content-sidebar {
+/*#content-sidebar {
     display: block;
     margin: auto;
     height: inherit;
-}
+}*/
 
 /* -------------------------------------------------------------------------- */
 
@@ -148,13 +162,19 @@ body {
 
 
 /* ----------------------------- Footer Styling ----------------------------- */
+#site-footer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
 #footer-container {
-    position: relative;
-    height: 44vh;
-    width: 100%;
-    top: 100vh;
+    height: 35vh;
+    width: 98.7vw;
     background-color: rgb(52, 46, 63);
     display: flex;
+    position: absolute;
     flex-wrap: nowrap;
     justify-items: center;
     align-items: center;

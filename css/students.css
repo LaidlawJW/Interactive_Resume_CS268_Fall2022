@@ -1,0 +1,30 @@
+#site-content {
+    flex-direction: row;
+}
+
+.student-info {
+    justify-content: left;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: left;
+}
+
+img {
+    display: block;
+    position: static;
+    border-radius: 25px;
+    align-items: left;
+    justify-content: left;
+}
+
+#connor-k {
+    height: "auto";
+    width: 20%;
+}
+
+#connor-m {
+    height: "auto";
+    width: 20%;
+}
