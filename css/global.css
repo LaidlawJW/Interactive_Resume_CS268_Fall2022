@@ -13,7 +13,8 @@ body {
 body::after {
     content: '';
     display: block;
-    height: 55vh; /* Make large enough to prevent footer from obscuring stuff */
+    height: 55vh;
+    /* Make large enough to prevent footer from obscuring stuff */
 }
 
 #page {
@@ -28,6 +29,37 @@ body::after {
 /* Sets background color of current page's name in navbar directory */
 .active {
     background-color: rgb(4, 132, 252)
+}
+
+/*------------------------------Header animation--------------------------*/
+h1 {
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+#blueline{
+    animation-duration: 2s;
+    animation-name: fadein;
+}
+
+@keyframes slidein {
+    from {
+        margin-bottom: 80px;
+    }
+
+    to {
+        margin-bottom: 22px;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 /* ----------------------------- Navbar Styling ----------------------------- */
