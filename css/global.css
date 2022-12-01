@@ -2,19 +2,14 @@
 html {
     position: relative;
     min-height: 100%;
-}
-
-body {
-    position: position: relative;
     margin: 0;
     padding: 0;
 }
 
-body::after {
-    content: '';
-    display: block;
-    height: 55vh;
-    /* Make large enough to prevent footer from obscuring stuff */
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 35vh;
 }
 
 #page {
@@ -26,18 +21,20 @@ body::after {
     max-width: 100%;
 }
 
-/* Sets background color of current page's name in navbar directory */
-.active {
-    background-color: rgb(4, 132, 252)
+#site-header{
+    margin-bottom: 30px;
 }
 
-/*------------------------------Header animation--------------------------*/
+/*.active {
+    background-color: rgb(4, 132, 252)
+}*/
+/* ------------------------------Header animation---------------------------- */
 h1 {
     animation-duration: 2s;
     animation-name: slidein;
 }
 
-#blueline{
+#blueline {
     animation-duration: 2s;
     animation-name: fadein;
 }
@@ -61,6 +58,7 @@ h1 {
         opacity: 100%;
     }
 }
+/* -------------------------------------------------------------------------- */
 
 /* ----------------------------- Navbar Styling ----------------------------- */
 #book {
@@ -123,7 +121,7 @@ h1 {
     float: right;
 }
 
-/*The items in the navbar (this part of the css shouldn't be needed*/
+/*The items in the navbar (this part of the css shouldn't be needed)*/
 /*
 #nav-container > ul > li {
     float: right;
@@ -144,6 +142,10 @@ h1 {
 /*stylize the nav links when cursors hovers over them*/
 #nav-container > ul > li a:hover {
     background-color: pink;
+}
+
+#nav-container > ul > li a:active {
+    background-color: rgb(4, 132, 252);
 }
 
 /*make navbar collapse at a certain width, show threeline.png*/
@@ -169,14 +171,17 @@ p {
 }
 
 #site-content {
-    padding-top: 20px;
+    min-height: 100%;
+    padding: 0;
     height: 75vh;
     width: 100%;
     top: 25vh;
     display: block;
+    margin-bottom: 35vh;
 }
 
 #content-main {
+    min-height:100%;
     display: block;
     margin: auto;
     height: inherit;
@@ -217,7 +222,6 @@ p {
 #links-container {
     height: inherit;
     width: 100px;
-    display: flex;
 }
 
 #footer-container > div {
@@ -235,7 +239,7 @@ p {
 #footer-container > div > ul {
     list-style-type: none;
     margin: 0px;
-    padding: 0px 0px;
+    padding: 0;
     width: 100%;
 }
 
