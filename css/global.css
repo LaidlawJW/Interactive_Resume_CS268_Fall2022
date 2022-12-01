@@ -25,9 +25,9 @@ body {
     margin-bottom: 30px;
 }
 
-/*.active {
+.active {
     background-color: rgb(4, 132, 252)
-}*/
+}
 /* ------------------------------Header animation---------------------------- */
 h1 {
     animation-duration: 2s;
