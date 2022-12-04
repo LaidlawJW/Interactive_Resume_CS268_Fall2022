@@ -1,33 +1,62 @@
 /* Global styling for all pages on the website */
-html {
+html, body {
     position: relative;
-    min-height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-body {
+/*body {
     position: relative;
     margin: 0;
     padding-bottom: 35vh;
-}
+}*/
 
-#page {
+/*#page {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
     position: relative;
     max-width: 100%;
-}
+}*/
 
-#site-header{
+/* ----------------------------- Header Styling ----------------------------- */
+#site-header {
     margin-bottom: 30px;
 }
 
 .active {
     background-color: rgb(4, 132, 252)
 }
+
+#site-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../images/bookwallpaper.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 20vh;
+    width: 100%;
+    top: 5vh;
+}
+
+#site-header > h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    color: white;
+}
+
+#site-header > h3 {
+    text-align: left;
+    color: white;
+    opacity: 0.8;
+}
+
 /* ------------------------------Header animation---------------------------- */
 h1 {
     animation-duration: 2s;
@@ -58,6 +87,7 @@ h1 {
         opacity: 100%;
     }
 }
+
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- Navbar Styling ----------------------------- */
@@ -164,7 +194,7 @@ h1 {
 
 
 
-/* ---------------------------- Content Styling ----------------------------- */
+/* ---------------------------- Content Section Styling ----------------------------- */
 p {
     width: auto;
     height: auto;
@@ -172,27 +202,22 @@ p {
 
 #site-content {
     min-height: 100%;
-    padding: 0;
+    padding: 20px;
+    margin-bottom: 20px;
     height: 75vh;
     width: 100%;
     top: 25vh;
     display: block;
     margin-bottom: 35vh;
+    flex: 1;
 }
 
 #content-main {
-    min-height:100%;
+    min-height: 100%;
     display: block;
     margin: auto;
     height: inherit;
 }
-
-/*#content-sidebar {
-    display: block;
-    margin: auto;
-    height: inherit;
-}*/
-
 /* -------------------------------------------------------------------------- */
 
 
@@ -200,50 +225,60 @@ p {
 
 /* ----------------------------- Footer Styling ----------------------------- */
 #site-footer {
-    position: absolute;
-    margin: 0;
-    padding: 0;
+    /*position: absolute;*/
+    display: flex;
+    flex: 1;
     bottom: 0;
-}
-
-#footer-container {
     height: 35vh;
     width: 98.7vw;
     background-color: rgb(52, 46, 63);
-    display: flex;
-    position: absolute;
-    flex-wrap: nowrap;
+    /*position: absolute;*/
+    /*flex-wrap: nowrap;*/
     justify-items: center;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
 }
 
+/*#footer-container {
+    height: 35vh;
+    width: 98.7vw;
+    background-color: rgb(52, 46, 63);
+    display: flex;
+    flex: 1;
+    position: absolute;
+    flex-wrap: nowrap;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}*/
+
 #links-container {
     height: inherit;
     width: 100px;
 }
 
-#footer-container > div {
+#site-footer > div {
     height: 212.5px;
     padding-right: 150px;
     margin: 0px;
 }
 
-#footer-container > div > h4 {
+#site-footer > div > h4 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(219, 219, 219);
     width: 15vw;
 }
 
-#footer-container > div > ul {
+#site-footer > div > ul {
     list-style-type: none;
     margin: 0px;
     padding: 0;
     width: 100%;
 }
 
-#footer-container > div > ul > li > a {
+#site-footer > div > ul > li > a {
     color: rgb(102, 180, 190);
     text-decoration: none;
 }

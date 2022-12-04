@@ -1,7 +1,3 @@
-#site-content {
-    flex-direction: row;
-}
-
 .student-info {
     justify-content: left;
     flex-wrap: wrap;
@@ -12,15 +8,17 @@
     width: 49vw;
 }
 
-img {
+.student-info > img {
     display: block;
     position: static;
     border-radius: 25px;
     align-items: left;
     justify-content: left;
+    width: 100px;
+    height: 100px;
 }
 
-#connor-k {
+/*#connor-k {
     height: "auto";
     width: 30%;
 }
@@ -39,8 +37,4 @@ img {
     height: "auto";
     width: 10%;
 }
-
-footer-spacer {
-    clear: both;
-    height: 60px;
-}
+*/
