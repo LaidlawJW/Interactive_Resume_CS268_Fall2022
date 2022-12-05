@@ -1,27 +1,14 @@
 /* Global styling for all pages on the website */
-html, body {
+html,
+body {
     position: relative;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100vw;
 }
-
-/*body {
-    position: relative;
-    margin: 0;
-    padding-bottom: 35vh;
-}*/
-
-/*#page {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    max-width: 100%;
-}*/
 
 /* ----------------------------- Header Styling ----------------------------- */
 #site-header {
@@ -113,7 +100,7 @@ h1 {
     position: fixed;
     top: 0px;
     height: 5vh;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     /* put in front of all other elements */
     z-index: 99;
@@ -150,13 +137,6 @@ h1 {
     height: inherit;
     float: right;
 }
-
-/*The items in the navbar (this part of the css shouldn't be needed)*/
-/*
-#nav-container > ul > li {
-    float: right;
-}
-*/
 
 /*stylize the nav links*/
 #nav-container > ul > li > a {
@@ -205,7 +185,7 @@ p {
     padding: 20px;
     margin-bottom: 20px;
     height: 75vh;
-    width: 100%;
+    width: 100vw;
     top: 25vh;
     display: block;
     margin-bottom: 35vh;
@@ -218,6 +198,7 @@ p {
     margin: auto;
     height: inherit;
 }
+
 /* -------------------------------------------------------------------------- */
 
 
@@ -230,7 +211,7 @@ p {
     flex: 1;
     bottom: 0;
     height: 35vh;
-    width: 98.7vw;
+    width: 100vw;
     background-color: rgb(52, 46, 63);
     /*position: absolute;*/
     /*flex-wrap: nowrap;*/
@@ -239,20 +220,6 @@ p {
     align-content: center;
     justify-content: space-evenly;
 }
-
-/*#footer-container {
-    height: 35vh;
-    width: 98.7vw;
-    background-color: rgb(52, 46, 63);
-    display: flex;
-    flex: 1;
-    position: absolute;
-    flex-wrap: nowrap;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-}*/
 
 #links-container {
     height: inherit;
