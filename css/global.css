@@ -1,23 +1,134 @@
-/* Global styling for all pages on the website */
-html,
-body {
-    position: relative;
+/* Styling for main body of the page */
+body, html, #page {
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100vw;
 }
+
+/* Smooth fade-in load effect for the page */
+body {
+    animation: fadeInAnimation ease 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+/* --------------------------------------- */
+
+/* ----------------------------- Navbar Styling ----------------------------- */
+
+/* Current page's tab in navbar has different background color */
+.active {
+    background-color: rgb(29, 99, 59)
+}
+
+#site-nav {
+    /* position: fixed; */
+    height: 50px;
+    /* Remains displayed in front of other elements */
+    z-index: 99;
+}
+
+#nav-container {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    background-color: rgb(46,139,87);
+}
+
+#book {
+    /* position: fixed; */
+    float: left;
+    justify-content: left;
+    justify-items: left;
+    width: 50px;
+    height: inherit;
+}
+
+#threeline {
+    height: 20px;
+    width: auto;
+    margin-top: 5px;
+    float: right;
+    padding: 0px;
+    display: none;
+}
+
+/* Affects text labels of navbar that aren't links */
+#nav-text-container > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 130%;
+    font-weight: bolder;
+    width: auto;
+    height: inherit;
+    padding: 5px 5px;
+    margin: 0;
+    position: absolute;
+    left: 55px;
+    top: 8px;
+    /* Text Outline */
+    text-shadow:
+    -.4px -.4px 0 #000,
+    .4px -.4px 0 #000,
+    -.4px .4px 0 #000,
+    .4px .4px 0 #000;
+}
+
+/* The list of stuff on the right side of navbar */
+#nav-container > ul {
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+    height: inherit;
+    /* max-height: 50px; */
+    float: right;
+}
+
+/* Nav links */
+#nav-container > ul > li > a {
+    font-family: "Montserrat",sans-serif;
+    font-size: 95%;
+    text-rendering: optimizeLegibility;
+    height: inherit;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    float: right;
+    color: white;
+}
+
+/* Nav links change color when cursor hovers over them */
+#nav-container > ul > li a:hover {
+    background-color: rgb(50, 223, 125);
+    color: black;
+    transition: 0.8s;
+}
+
+/* Make navbar collapse at certain width, show threeline.png */
+@media (max-width: 1050px) {
+    #nav-container > ul > li a {
+        display: none;
+    }
+
+    #threeline {
+        display: inline-block;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
 
 /* ----------------------------- Header Styling ----------------------------- */
-#site-header {
-    margin-bottom: 30px;
-}
-
-.active {
-    background-color: rgb(4, 132, 252)
-}
 
 #site-header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -26,33 +137,38 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    height: 20vh;
-    width: 100%;
-    top: 5vh;
+    height: 300px;
 }
 
-#site-header > h1 {
+#header-container {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-header > #header-container > h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: left;
+    text-align: center;
     color: white;
 }
 
-#site-header > h3 {
-    text-align: left;
+#site-header > #header-container > h3 {
+    text-align: center;
     color: white;
     opacity: 0.8;
 }
 
-/* ------------------------------Header animation---------------------------- */
+/* ---- Header Animation ---- */
 h1 {
     animation-duration: 2s;
     animation-name: slidein;
 }
 
-#blueline {
+#green-line {
     animation-duration: 2s;
     animation-name: fadein;
+    height: 20px;
+    width: 300px;
 }
 
 @keyframes slidein {
@@ -74,100 +190,7 @@ h1 {
         opacity: 100%;
     }
 }
-
-/* -------------------------------------------------------------------------- */
-
-/* ----------------------------- Navbar Styling ----------------------------- */
-#book {
-    position: fixed;
-    float: left;
-    justify-content: left;
-    justify-items: left;
-    width: 40px;
-    height: 30px;
-}
-
-#threeline {
-    height: 20px;
-    width: auto;
-    margin-top: 5px;
-    float: right;
-    padding: 0px;
-    display: none;
-}
-
-#site-nav {
-    position: fixed;
-    top: 0px;
-    height: 5vh;
-    width: 100vw;
-    background-color: white;
-    /* put in front of all other elements */
-    z-index: 99;
-}
-
-#nav-container {
-    display: flex;
-    width: 100%;
-    height: 2vh;
-    margin: auto;
-    background-color: white;
-}
-
-/*Affects text labels of navbar that aren't links*/
-#nav-text-container > p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 130%;
-    font-weight: bolder;
-    width: auto;
-    height: auto;
-    padding: 5px 5px;
-    margin: 0;
-    position: absolute;
-    left: 50px;
-}
-
-/*The list of stuff on the right side of navbar*/
-#nav-container > ul {
-    list-style-type: none;
-    top: 0px;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: inherit;
-    float: right;
-}
-
-/*stylize the nav links*/
-#nav-container > ul > li > a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 3vh;
-    padding: 1vh;
-    text-decoration: none;
-    display: block;
-    float: right;
-    color: black;
-}
-
-/*stylize the nav links when cursors hovers over them*/
-#nav-container > ul > li a:hover {
-    background-color: pink;
-}
-
-#nav-container > ul > li a:active {
-    background-color: rgb(4, 132, 252);
-}
-
-/*make navbar collapse at a certain width, show threeline.png*/
-@media (max-width:975px) {
-    #nav-container > ul > li a {
-        display: none;
-    }
-
-    #threeline {
-        display: inline-block;
-    }
-}
+/* -------------------------- */
 
 /* -------------------------------------------------------------------------- */
 
@@ -175,20 +198,12 @@ h1 {
 
 
 /* ---------------------------- Content Section Styling ----------------------------- */
-p {
-    width: auto;
-    height: auto;
-}
 
 #site-content {
     min-height: 100%;
     padding: 20px;
-    margin-bottom: 20px;
-    height: 75vh;
-    width: 100vw;
-    top: 25vh;
+    height: 800px;
     display: block;
-    margin-bottom: 35vh;
     flex: 1;
 }
 
@@ -199,22 +214,24 @@ p {
     height: inherit;
 }
 
+#content-main > p {
+    width: auto;
+    height: auto;
+}
+
 /* -------------------------------------------------------------------------- */
 
 
 
 
 /* ----------------------------- Footer Styling ----------------------------- */
+
 #site-footer {
-    /*position: absolute;*/
     display: flex;
     flex: 1;
     bottom: 0;
-    height: 35vh;
-    width: 100vw;
+    height: 300px;
     background-color: rgb(52, 46, 63);
-    /*position: absolute;*/
-    /*flex-wrap: nowrap;*/
     justify-items: center;
     align-items: center;
     align-content: center;
