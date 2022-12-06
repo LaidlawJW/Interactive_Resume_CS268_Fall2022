@@ -202,7 +202,7 @@ h1 {
 #site-content {
     min-height: 100%;
     padding: 20px;
-    height: 800px;
+    height: fit-content;
     display: block;
     flex: 1;
 }
