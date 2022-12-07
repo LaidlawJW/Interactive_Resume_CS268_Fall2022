@@ -5,21 +5,18 @@ body, html, #page {
     flex-direction: column;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Smooth fade-in load effect for the page */
 body {
-    animation: fadeInAnimation ease 0.7s;
+    /* See "Header Styling" for animation details */
+    animation: fade-in ease 0.7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-  
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
+
 /* --------------------------------------- */
 
 /* ----------------------------- Navbar Styling ----------------------------- */
@@ -30,7 +27,8 @@ body {
 }
 
 #site-nav {
-    /* position: fixed; */
+    position: sticky;
+    top: 0px;
     height: 50px;
     /* Remains displayed in front of other elements */
     z-index: 99;
@@ -74,12 +72,6 @@ body {
     position: absolute;
     left: 55px;
     top: 8px;
-    /* Text Outline */
-    text-shadow:
-    -.4px -.4px 0 #000,
-    .4px -.4px 0 #000,
-    -.4px .4px 0 #000,
-    .4px .4px 0 #000;
 }
 
 /* The list of stuff on the right side of navbar */
@@ -87,9 +79,6 @@ body {
     list-style-type: none;
     margin: auto;
     width: 100%;
-    height: inherit;
-    /* max-height: 50px; */
-    float: right;
 }
 
 /* Nav links */
@@ -97,7 +86,8 @@ body {
     font-family: "Montserrat",sans-serif;
     font-size: 95%;
     text-rendering: optimizeLegibility;
-    height: inherit;
+    height: 20px;
+    line-height: 20px;
     padding: 15px;
     text-decoration: none;
     display: block;
@@ -141,37 +131,37 @@ body {
 }
 
 #header-container {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-#site-header > #header-container > h1 {
+#header-container > h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     color: white;
+    animation-duration: 2s, 2s;
+    animation-name: slide-in, fade-in;
+    animation-fill-mode: forwards;
 }
 
-#site-header > #header-container > h3 {
+#header-container > h3 {
     text-align: center;
     color: white;
     opacity: 0.8;
-}
-
-/* ---- Header Animation ---- */
-h1 {
-    animation-duration: 2s;
-    animation-name: slidein;
+    animation-name: appear, slide-in;
+    animation-duration: 2s, 2s;
+    animation-fill-mode: forwards, forwards;
 }
 
 #green-line {
     animation-duration: 2s;
-    animation-name: fadein;
+    animation-name: fade-in;
     height: 20px;
     width: 300px;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
     from {
         margin-bottom: 80px;
     }
@@ -181,13 +171,29 @@ h1 {
     }
 }
 
-@keyframes fadein {
+@keyframes fade-in {
     from {
         opacity: 0%;
     }
 
     to {
         opacity: 100%;
+    }
+}
+
+@keyframes appear {
+    0% {
+        visibility: hidden;
+        opacity: 0%;
+    }
+
+    50% {
+        visibility: visible;
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 80%;
     }
 }
 /* -------------------------- */
@@ -229,75 +235,129 @@ h1 {
 #site-footer {
     display: flex;
     flex: 1;
-    bottom: 0;
-    height: 300px;
-    background-color: rgb(52, 46, 63);
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.849);
 }
 
-#links-container {
-    height: inherit;
-    width: 100px;
+#footer-main {
+    width: 100%;
+    display: grid;
+    padding: 40px;
+    justify-content: space-around;
+    grid-template-areas:
+        "a b c d";
 }
 
-#site-footer > div {
-    height: 212.5px;
-    padding-right: 150px;
-    margin: 0px;
+#footer-main > div {
+    height: fit-content;
 }
 
-#site-footer > div > h4 {
+#footer-main > div > p {
+    color: rgb(161, 161, 161);
+}
+
+#footer-main > div > h4 {
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(219, 219, 219);
-    width: 15vw;
+    width: 300px;
 }
 
-#site-footer > div > ul {
+#footer-main > div > ul {
     list-style-type: none;
-    margin: 0px;
+    margin: auto;
     padding: 0;
-    width: 100%;
+    width: 70%;
 }
 
-#site-footer > div > ul > li > a {
+#footer-main > div > ul > li > a {
     color: rgb(102, 180, 190);
     text-decoration: none;
 }
 
-#footer-report > ul > li {
-    padding: 0px 0px;
-    width: max-content;
+#footer-main > div > ul > li > a:hover {
+    color: rgba(179, 179, 179, 0.377);
+    transition: 0.5s;
+}
+
+#footer-main > div > ul > li > a:visited {
+    color: rgb(125, 22, 173);
+    transition: 0.5s;
+}
+
+/* - Infocard 1 Styling - */
+#footer-infocard1 {
+    width: 300px;
+}
+
+/* - Infocard 2 Styling - */
+#footer-infocard2 {
+    width: 300px;
+}
+
+/* - Footer Nav Styling - */
+#footer-nav {
+    width: fit-content;
 }
 
 #footer-nav > ul > li {
     padding: 5px 0px;
-    width: max-content;
 }
 
-#footer-report {
-    width: 80px;
+/* -- Contact Block Styling -- */
+#footer-contact {
+    text-align: center;
 }
 
-#footer-infocard {
-    width: 200px;
-}
-
-#footer-infocard > p {
-    color: rgb(161, 161, 161);
-    width: 300px;
-}
-
-#footer-nav {
-    width: 80px;
+#footer-contact > ul {
+    list-style-type: none;
 }
 
 #footer-contact > ul > li {
-    padding: 3px 0px;
+    padding-top: 3px;
     color: rgb(143, 143, 143);
-    flex-wrap: wrap;
+}
+
+@media(max-width: 1400px) {
+    #footer-main {
+        grid-template-areas:
+            "a b"
+            "c d";
+    }
+}
+
+@media(max-width: 800px) {
+    #footer-main {
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d";
+    }
 }
 
 /* -------------------------------------------------------------------------- */
+
+#top-button {
+    background-color: rgb(58, 58, 58);
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#white-caret-up {
+    width: 28px;
+    height: 28px;
+}
+
+#top-button:hover {
+    background-color: black;
+    transition: 1s;
+}
