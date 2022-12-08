@@ -1,41 +1,42 @@
-console.log("working");
-
 topButton = document.getElementById("top-button");
 console.log(topButton);
 
-//  When user clicks on button, scroll to top of page
 topButton.onclick = function() {
-    //  Safari compatibility
-    document.body.scrollTop = 0;
-
-    //  Other browsers (Chrome, Firefox, IE, Opera)
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function throttle() {
+//  Function designed to throttle visibleCheck so that it doesn't execute
+//  excessively. May seem unnecessary here given the complexity of visibleCheck
+//  but could be effective if more scroll-dependent functions are incorporated later.
+function throttle(func, delayTime) {
 
+    //  Logging current time
+    time = Date.now();
+
+    return function() {
+        //  If delayTime milliseconds have passed since
+        //  last execution, allow function to execute
+        if((time + delayTime - Date.now()) <= 0) {
+            func();
+
+            //  Reset time
+            time = Date.now();
+        }
+    };
 }
 
 function visibleCheck() {
 
-    console.log("visiblecheck is working")
-
-    // Using document.body and documentElement for added safari compatibility
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    //  Using document.body and documentElement for added safari compatibility
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         topButton.style.visibility = "visible";
+        topButton.style.opacity = "1";
     }
     else {
         topButton.style.visibility = "hidden";
+        topButton.style.opacity = "0";
     }
 }
 
-window.addEventListener('scroll', throttle(visibleCheck, 100))
-
-//  When user clicks on button, scroll to top of page
-function scrollTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-function scrollThrottler() {
-
-}
+//  Allow visibleCheck to execute only every 50ms
+window.addEventListener('scroll', throttle(visibleCheck, 50))
