@@ -42,21 +42,17 @@ body {
 }
 
 #book {
-    /* position: fixed; */
     float: left;
-    justify-content: left;
-    justify-items: left;
-    width: 50px;
+    width: 70px;
     height: inherit;
 }
 
 #threeline {
-    height: 20px;
-    width: auto;
-    margin-top: 5px;
+    -webkit-font-smoothing: antialiased;
+    filter: invert(100%);
+    height: 50px;
+    width: 50px;
     float: right;
-    padding: 0px;
-    display: none;
 }
 
 /* Affects text labels of navbar that aren't links */
@@ -70,7 +66,7 @@ body {
     padding: 5px 5px;
     margin: 0;
     position: absolute;
-    left: 55px;
+    left: 75px;
     top: 8px;
 }
 
@@ -93,19 +89,50 @@ body {
     display: block;
     float: right;
     color: white;
+    transition: 0.8s;
 }
 
 /* Nav links change color when cursor hovers over them */
 #nav-container > ul > li a:hover {
     background-color: rgb(50, 223, 125);
     color: black;
+}
+
+#menu-button-container {
+    display: none;
+}
+
+#menu-button {
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-button:hover {
+    background-color: rgb(50, 223, 125);
     transition: 0.8s;
 }
 
 /* Make navbar collapse at certain width, show threeline.png */
-@media (max-width: 1050px) {
+@media (max-width: 990px) {
+
+    #nav-container > ul > li > a {
+        width: 0px;
+    }
+
     #nav-container > ul > li a {
         display: none;
+    }
+
+    #menu-button-container {
+        display: flex;
+    }
+
+    #menu-button {
+        display: inline-block;
     }
 
     #threeline {
@@ -350,6 +377,9 @@ body {
     padding: 0;
     z-index: 99;
     cursor: pointer;
+    transition: 0.3s linear;
+    /* display: none; */
+    visibility: hidden;
 }
 
 #white-caret-up {
