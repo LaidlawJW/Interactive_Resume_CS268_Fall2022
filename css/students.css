@@ -5,7 +5,8 @@
     position: relative;
     flex-direction: column;
     text-align: left;
-    width: 49vw;
+    width: 46vw;
+    height: 25vh;
 }
 
 .student-info > img {
@@ -15,26 +16,13 @@
     align-items: left;
     justify-content: left;
     width: 100px;
-    height: 100px;
-}
-
-/*#connor-k {
-    height: "auto";
-    width: 30%;
-}
-
-#connor-m {
-    height: "auto";
-    width: 30%;
+    height: auto;
 }
 
 #lany-r {
-    height: "auto";
-    width: 15%;
+    width: 60px;
 }
 
-#jordon-l {
-    height: "auto";
-    width: 10%;
+#keller-p {
+    width: 65px;
 }
-*/
