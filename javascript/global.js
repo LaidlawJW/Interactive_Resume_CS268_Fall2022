@@ -40,3 +40,32 @@ function visibleCheck() {
 
 //  Allow visibleCheck to execute only every 50ms
 window.addEventListener('scroll', throttle(visibleCheck, 50))
+
+
+
+
+navMenuLinks = document.getElementsByClassName("nav-menu-container");
+
+//  Storing number of nav menu links
+numNavMenuLinks = navMenuLinks.length;
+
+navPopup = document.getElementById("nav-popup");
+menuButton = document.getElementById("menu-button");
+
+isOpen = false;
+
+//  When menu button is clicked, display navbar menu.
+//  When it is clicked again, Collapse navbar menu
+menuButton.onclick = function () {
+
+    if(!isOpen) {
+        //  Accounts for borders (the first child has a border-top of 1px)
+        navPopup.style.height = (numNavMenuLinks * 50 + 1) + "px";
+        isOpen = true;
+    }
+    else {
+        navPopup.style.height = "0px";
+        isOpen = false;
+    }
+
+}
