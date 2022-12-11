@@ -257,15 +257,16 @@ body {
     min-height: 100%;
     padding: 20px;
     height: fit-content;
-    display: block;
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 #content-main {
-    min-height: 100%;
+    width: 1536px;
+    height: fit-content;
     display: block;
     margin: auto;
-    height: inherit;
 }
 
 #content-main > p {
