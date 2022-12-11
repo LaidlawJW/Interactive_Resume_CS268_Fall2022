@@ -1,28 +1,166 @@
-.student-info {
-    justify-content: left;
-    flex-wrap: wrap;
-    display: inline-block;
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+#content-main {
+    display: grid;
+    justify-content: space-evenly;
+    row-gap: 40px;
+    grid-template:
+    "a b"
+    "c d"
+    "e f"
+    "g h";
+}
+
+/* -------------------- Standard Card -------------------- */
+.student-infocard {
+    display: flex;
+    box-sizing: border-box;
     position: relative;
-    flex-direction: column;
-    text-align: left;
-    width: 46vw;
-    height: 25vh;
+    height: 230px;
+    width: 550px;
+    outline: 2px solid rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.student-info > img {
-    display: block;
-    position: static;
-    border-radius: 25px;
-    align-items: left;
-    justify-content: left;
-    width: 100px;
-    height: auto;
+.student-infocard-img {
+    /* padding: 0px 15px 0px 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 159px;
+    height: 100%;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    z-index: 50;
 }
 
-#lany-r {
-    width: 60px;
+.student-infocard-img > img {
+    border-radius: 125px;
+    width: 125px;
+    height: 125px;
+    border: 2px solid rgba(0, 0, 0, 0.308);
 }
 
-#keller-p {
-    width: 65px;
+.student-infocard-main {
+    position: relative;
+    padding: 0px 20px 0px 20px;
+    margin: auto;
+}
+
+.student-infocard-title {
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.student-infocard-info {
+    font-family: Abel, Arial, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.699);
+    position: absolute;
+    bottom: -8px;
+    right: 12px;
+}
+
+/* -------------------- Overlay Card -------------------- */
+.student-infocard-bio {
+    position: absolute;
+    height: 230px;
+    width: 159px;
+    overflow: hidden;
+    /* background-color: rgb(226,108,98); */
+    transition: all 0.4s ease-out;
+}
+
+.student-bio-main {
+    width: 349px;
+    padding: 0px 0px 0px 181px;
+}
+
+.student-bio-title {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+
+.student-bio-title > h3 {
+    font-family: Abel, Arial, Verdana, sans-serif;
+    font-size: 170%;
+    margin: auto;
+}
+
+.student-bio-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+}
+
+.student-bio-text > p {
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.student-infocard:hover > .student-infocard-bio{
+    width: 550px;
+}
+
+/* ------------------------------------------------------ */
+
+/* Creating a color pattern to create variety */
+#content-main > div:nth-child(4n) > div:first-child {
+    background-color: rgb(226,108,98);
+    color: white;
+}
+
+#content-main > div:nth-child(4n) > div:last-child {
+    background-color: rgb(226,108,98);
+    color: white;
+}
+
+#content-main > div:nth-child(4n + 1) > div:first-child {
+    background-color: rgb(226,108,98);
+    color: white;
+}
+
+#content-main > div:nth-child(4n + 1) > div:last-child {
+    background-color: rgb(226,108,98);
+    color: white;
+}
+
+#content-main > div:nth-child(4n + 2) > div:first-child {
+    background-color: rgb(149,191,170);
+    color: rgb(28, 63, 45);
+}
+
+#content-main > div:nth-child(4n + 2) > div:last-child {
+    background-color: rgb(149,191,170);
+    color: rgb(28, 63, 45);
+}
+
+#content-main > div:nth-child(4n + 3) > div:first-child {
+    background-color: rgb(149,191,170);
+    color: rgb(28, 63, 45);
+}
+
+#content-main > div:nth-child(4n + 3) > div:last-child {
+    background-color: rgb(149,191,170);
+    color: rgb(28, 63, 45);
+}
+
+
+@media (max-width: 1190px) {
+
+    #content-main {
+        grid-template:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+    }
+
 }
