@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+#content-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contains all about me information */
+#content-main-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1344px;
+    height: 540px;
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+/* Contains portrait of Professor Gomes */
+#content-main-img {
+    display: flex;
+    position: relative;
+    padding: 0px 50px 0px 50px;
+}
+
+#content-main-img::before {
+    content: "";
+    background-color: rgb(139,46,98);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: -30px;
+    right: 20px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+#content-main-img::after {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 120px;
+    border: 3px solid rgb(139,46,98);
+    border-radius: 6px;
+    bottom: -25px;
+    left: 25px;
+    z-index: 1;
+}
+
+#gomes-portrait {
+    width: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Contains all textual and interactive info */
+#content-main-info {
+    padding: 0px 50px 0px 50px;
+    width: 754px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----------- LINKS ----------- */
+#content-main-links {
+    display: grid;
+    height: fit-content;
+    width: inherit;
+    grid-template-areas:
+    "a b c d";
+    justify-content: space-evenly;
+}
+
+#content-main-links > div {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#content-main-links > div > a {
+    text-decoration: none;
+}
+
+#google-scholar {
+    width: 30px;
+    object-fit: contain;
+}
+
+#linkedin {
+    width: 20px;
+    object-fit: contain;
+}
+/* ----------------------------- */
+
+#content-main-contact {
+    text-align: center;
+}
+
+#content-main-contact > ul {
+    /* margin: 0; */
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Restructures content for a vertical fit */
+@media (max-width: 1000px) {
+
+    #content-main-row {
+        flex-direction: column;
+        height: fit-content;
+        width: 400px;
+    }
+
+    #content-main-img {
+        padding-bottom: 40px; 
+    }
+
+    #content-main-img::before {
+        width: 150px;
+        height: 150px;
+        top: -20px;
+        right: 30px;
+    }
+
+    #content-main-img::after {
+        height: 135px;
+        width: 90px;
+        bottom: 20px;
+        left: 30px;
+    }
+
+    #gomes-portrait {
+        width: 300px;
+    }
+
+    #content-main-info {
+        width: 370px;
+    }
+
+    #content-main-links {
+        grid-template-areas:
+        "a b"
+        "c d";
+    }
+
+}
