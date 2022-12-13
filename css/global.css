@@ -120,7 +120,7 @@ body {
 }
 
 #nav-popup {
-    background-color: rgb(46,139,87);;
+    background-color: rgb(46,139,87);
     top: 50px;
     position: fixed;
     width: 100%;
@@ -151,7 +151,7 @@ body {
     padding-left: 50px;
     color: white;
     text-decoration: none;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 
 #nav-popup > div > a:hover {
@@ -264,15 +264,32 @@ body {
 
 #content-main {
     width: 1536px;
+    min-height: 1000px;
     height: fit-content;
-    display: block;
-    margin: auto;
 }
 
 #content-main > p {
     width: auto;
     height: auto;
 }
+
+/* Styling for content sections of pages that are incomplete */
+.work-in-progress {
+    background: radial-gradient(circle at center, rgb(75, 75, 75), black 200%);
+}
+
+.work-in-progress > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-in-progress > div > h1 {
+    color: white;
+    margin: 0;
+}
+/* ---------------------------------------------------------- */
+
 
 /* -------------------------------------------------------------------------- */
 
@@ -310,7 +327,7 @@ body {
 
 #footer-main > div > h4 {
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(219, 219, 219);
     width: 300px;
 }
