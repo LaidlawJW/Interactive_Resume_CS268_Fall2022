@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
-    <link rel="icon" type="image/x-icon" href="images/classicon.png">
+    <title>Research</title>
+    <link rel="icon" type="image/x-icon" href="images/graphicon.png">
     <link rel="stylesheet" href="css/global.css">
     <script src="javascript/global.js" defer></script>
+    <style>
+        <?php include 'C:/xampp/htdocs/resume project/css/global.css';
+        ?>
+
+    </style>
 </head>
 
 <body>
@@ -30,10 +35,10 @@
 
                 <ul>
                     <li><a href="students.html">STUDENTS</a></li>
-                    <li><a href="posts.html" class="active">POSTS</a></li>
+                    <li><a href="posts.html">POSTS</a></li>
                     <li><a href="pedagogy.html">PEDAGOGY</a></li>
                     <li><a href="hobbies.html">HOBBIES</a></li>
-                    <li><a href="research.html">RESEARCH</a></li>
+                    <li><a href="research.html" class="active">RESEARCH</a></li>
                     <li><a href="aboutme.html">ABOUT ME</a></li>
                     <li><a href="homepage.html">HOME</a></li>
                 </ul>
@@ -55,7 +60,7 @@
         <div id="nav-popup">
             <div class="nav-menu-container"><a href="homepage.html">HOME</a></div>
             <div class="nav-menu-container"><a href="aboutme.html">ABOUT ME</a></div>
-            <div class="nav-menu-container"><a href="research.html">RESEARCH</a></div>
+            <div class="nav-menu-container"><a href="research.php">RESEARCH</a></div>
             <div class="nav-menu-container"><a href="hobbies.html">HOBBIES</a></div>
             <div class="nav-menu-container"><a href="pedagogy.html">PEDAGOGY</a></div>
             <div class="nav-menu-container"><a href="posts.html">POSTS</a></div>
@@ -71,11 +76,11 @@
 
             <div id="header-container">
 
-                <h1>Posts</h1>
+                <h1>Research</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>Updates from me.</h3>
+                <h3>Published work.</h3>
 
             </div>
 
@@ -90,20 +95,18 @@
 
             <div id="content-main">
 
-                <h2>Posts</h2>
+                <h2>Research from Dr.Gomes and many others</h2>
 
-                <div id="posts">
-
-                </div>
-
-                <form name="myForm" action="posts.php" onsubmit="return validateForm()" method="post" required>
-                    <h3><b>Enter title: </b><input type="text" id="title"><br><br>
-                        <b>Enter text: </b><input type="text" id="text"><br><br>
-                        <input type="button" value="Post" onclick="createPost()" />
-                        <input type="button" value="Clear all posts" onclick="clearPosts()" />
-                    </h3>
+                <form name="myForm" action="research.php" onsubmit="return validateResearchForm()" method="post" required>
+                    <h1><u>Enter a new research item:</u></h1><br>
+                    <h2><b>Enter research authors: </b><input type="text" name="authors"><br><br>
+                        <b>Enter research publication date: </b><input type="text" name="publishDate"><br><br>
+                        <b>Enter research publication title: </b><input type="text" name="title"><br><br>
+                        <b>Enter research publication journal: </b><input type="text" name="journal"><br><br>
+                        <b>Enter research publication link: </b><input type="text" name="link"><br><br>
+                        <input type="submit">
+                    </h2>
                 </form>
-
             </div>
 
         </content>
@@ -175,4 +178,78 @@
         </footer>
         <!--------------------------------------------------------------------->
     </div>
-</body></html>
+</body>
+
+</html>
+//Add a new entry
+<?php
+// Get a connection for the database
+require_once('sql_conn.php');
+
+// Taking all 5 values from the form data(input), id auto increments
+$writers =  $_REQUEST["writers"];
+$publishDate = $_REQUEST["publishDate"];
+$title =  $_REQUEST["title"];
+$journal =  $_REQUEST["journal"];
+$link =  $_REQUEST["link"];
+         
+// Performing insert query execution
+// here our table name is flights
+$sqlquery = "INSERT INTO research (writers, publishDate, title, journal, link) VALUES ('$writers', '$publishDate', $title, '$journal', '$link')";
+        
+if ($conn->query($sqlquery) === TRUE) {
+echo "Record inserted successfully";
+} else {
+echo "Error: " . $sqlquery . "<br>" . $dbc->error;
+}
+//--------------------------------------------------------------------------
+
+// Printing the existing data
+
+$query = "SELECT id, writers, publishDate, title, journal, link FROM research";
+
+// Get a response from the database by sending the connection
+// and the query
+$response = @mysqli_query($dbc, $query);
+
+// If the query executed properly proceed
+if($response){
+
+echo '<table align="left" cellspacing="5" cellpadding="8" border="2px solid black" border-collapse="collapse">
+	<tr>
+		<td align="left"><b>Research Id</b></td>
+		<td align="left"><b>Research Authors</b></td>
+		<td align="left"><b>Research Publish Date</b></td>
+		<td align="left"><b>Research Title</b></td>
+        <td align="left"><b>Research Journal</b></td>
+        <td align="left"><b>Research Link</b></td>
+	</tr>';
+
+// mysqli_fetch_array will return a row of data from the query
+// until no further data is available
+while($row = mysqli_fetch_array($response)){
+
+echo '<tr><td align="left">' . 
+$row['id'] . '</td><td align="left">' .
+$row['writers'] . '</td><td align="left">' . 
+$row['publishDate'] . '</td><td align="left">' .
+$row['title'] . '</td><td align="left">'.
+$row['journal'] . '</td><td align="left">'.
+$row['link'] . '</td><td align="left">';
+
+echo '</tr>';
+}
+
+echo '</table>';
+
+} else {
+
+echo "Couldn't issue database query<br />";
+
+echo mysqli_error($dbc);
+
+}
+
+// Close connection
+mysqli_close($dbc); 
+?>

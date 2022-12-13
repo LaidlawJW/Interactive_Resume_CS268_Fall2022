@@ -17,7 +17,7 @@
         <button id="top-button">
             <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="top">
         </button>
-        
+
         <!------------------------------ Navbar ------------------------------->
         <nav id="site-nav">
             <div id="nav-container">
@@ -33,7 +33,7 @@
                     <li><a href="posts.html">POSTS</a></li>
                     <li><a href="pedagogy.html">PEDAGOGY</a></li>
                     <li><a href="hobbies.html">HOBBIES</a></li>
-                    <li><a href="research.html" class="active">RESEARCH</a></li>
+                    <li><a href="research.php" class="active">RESEARCH</a></li>
                     <li><a href="aboutme.html">ABOUT ME</a></li>
                     <li><a href="homepage.html">HOME</a></li>
                 </ul>
@@ -68,15 +68,15 @@
 
         <!------------------------------ Header ------------------------------->
         <header id="site-header" title="greeting">
-            
+
             <div id="header-container">
 
                 <h1>Research</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>My critical published work.</h3>
-                
+                <h3>Published work.</h3>
+
             </div>
 
         </header>
@@ -90,15 +90,18 @@
 
             <div id="content-main">
 
-                <h2>Welcome</h2>
+                <h2>Research from Dr.Gomes and many others</h2>
 
-                <img id="gomes-portrait" src="images/gomesportrait.jpg">
-
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                    nesciunt fugit cumque sit sint iure adipisci provident
-                    delectus dolorum quod illum maiores possimus, ratione
-                    repudiandae culpa atque magni. Error, quod.</p>
-
+                <form name="myForm" onsubmit="return validateResearchForm()" method="post" required>
+                    <h1><u>Enter a new research item:</u></h1><br>
+                    <h2><b>Enter research authors: </b><input type="text" name="authors"><br><br>
+                        <b>Enter research publication date: </b><input type="text" name="publishDate"><br><br>
+                        <b>Enter research publication title: </b><input type="text" name="title"><br><br>
+                        <b>Enter research publication journal: </b><input type="text" name="journal"><br><br>
+                        <b>Enter research publication link: </b><input type="text" name="link"><br><br>
+                        <input type="submit">
+                    </h2>
+                </form>
             </div>
 
         </content>
@@ -109,58 +112,60 @@
 
         <!------------------------------ Footer ------------------------------->
         <footer id="site-footer">
-            
+
             <div id="footer-main">
 
                 <div id="footer-infocard1">
 
                     <h4><u>Honoring Indigenous Peoples</u></h4>
-    
+
                     <p>
                         "I acknowledge that the University of Wisconsin-Eau Claire
                         occupies the sacred and ancestral land of the Indigenous
                         Peoples. I honor the land of the Ojibwe and Dakota Nations."
                     </p>
-    
+
                 </div>
-    
+
                 <div id="footer-infocard2">
-    
+
                     <h4>
                         <u>Proud Representative of the<br>University of Wisconsin-Eau Claire</u>
                     </h4>
-        
+
                     <p>
                         Rahul Gomes is an exceptionally established member of
                         the University of Wisconsin Eau Claire faculty. His
                         dedication to his craft and excellence has introduced
                         many notable ideas to the field of computer science.
                     </p>
-    
+
                 </div>
-    
+
                 <div id="footer-nav">
-    
+
                     <h4><u>External Links</u></h4>
-    
+
                     <ul>
                         <li><a href="https://www.uwec.edu/profiles/gomesr/" target="_blank">University Profile</a></li>
                         <li><a href="https://scholar.google.com/citations?user=s2LUBTQAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></li>
                         <li><a href="https://www.webofscience.com/wos/author/record/Z-4475-2019" target="_blank">Web of Science Profile</a></li>
-    
+
                     </ul>
-    
+
                 </div>
-    
+
                 <div id="footer-contact">
-    
+
                     <h4><u>Contact</u></h4>
-    
+
                     <ul>
-                        <li><p>Office Phone: <b>715-836-3395</b></p></li>
+                        <li>
+                            <p>Office Phone: <b>715-836-3395</b></p>
+                        </li>
                         <li><a href="mailto:gomesr@uwec.edu">Email Me</a></li>
                     </ul>
-    
+
                 </div>
 
             </div>
@@ -168,5 +173,4 @@
         </footer>
         <!--------------------------------------------------------------------->
     </div>
-</body>
-</html>
+</body></html>
