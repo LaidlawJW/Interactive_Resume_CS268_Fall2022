@@ -5,17 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
-    <link rel="icon" type="image/x-icon" href="images/graphicon.png">
+    <title>About Me</title>
+    <link rel="icon" type="image/x-icon" href="images/codeicon.png">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/aboutme.css">
     <script src="javascript/global.js" defer></script>
-    <style>
-        table {
-            border-collapse: separate;
-            border: 2px solid black;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -39,8 +33,8 @@
                     <li><a href="students.php">STUDENTS</a></li>
                     <li><a href="posts.php">POSTS</a></li>
                     <li><a href="pedagogy.php">PEDAGOGY</a></li>
-                    <li><a href="research.php" class="active">RESEARCH</a></li>
-                    <li><a href="aboutme.php">ABOUT ME</a></li>
+                    <li><a href="research.php">RESEARCH</a></li>
+                    <li><a href="aboutme.php" class="active">ABOUT ME</a></li>
                     <li><a href="homepage.php">HOME</a></li>
                 </ul>
 
@@ -77,11 +71,11 @@
 
             <div id="header-container">
 
-                <h1>Research</h1>
+                <h1>About Me</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>Published work.</h3>
+                <h3>Professor of Computer Science, Ph.D.</h3>
 
             </div>
 
@@ -96,65 +90,78 @@
 
             <div id="content-main">
 
-                <h2>Research from Dr.Gomes and many others</h2>
+                <div id="content-main-row">
 
-                <form name="myForm" action="research.php" onsubmit="return validateResearchForm()" method="post" required>
-                    <h1><u>Enter a new research item:</u></h1><br>
-                    <h2><b>Enter research authors: </b><input type="text" name="writers"><br><br>
-                        <b>Enter research publication date: </b><input type="text" name="publishDate"><br><br>
-                        <b>Enter research publication title: </b><input type="text" name="title"><br><br>
-                        <b>Enter research publication journal: </b><input type="text" name="journal"><br><br>
-                        <b>Enter research publication link: </b><input type="text" name="link"><br><br>
-                        <input type="submit">
-                    </h2>
-                </form>
+                    <div id="content-main-img">
+                        <img id="gomes-portrait" src="images/gomesportrait.jpg">
+                    </div>
 
-                <?php
-                    require_once("sql_conn.php");
-                    // Printing the existing data
-                    // Create a query for the database
-                    $query = "SELECT * FROM research";
+                    <div id="content-main-info">
 
-                    // Get a response from the database by sending the connection
-                    // and the query
-                    $response = @mysqli_query($dbc, $query);
+                        <div id="content-main-info-header">
+                            <h1>Who is Rahul Gomes?</h1>
+                        </div>
 
-                    // If the query executed properly proceed
-                    if($response){
+                        <div id="content-main-info-text">
+                            <p>Rahul Gomes is an Assistant Professor of Computer
+                                Science at the University of Wisconsin-Eau
+                                Claire and an administrator at the Blugold
+                                Center for High Performance Computing. The main
+                                focus of his research is to broaden the spectrum
+                                and hasten the advancement of machine learning,
+                                an exceptionally important division of AI that
+                                will cultivate the future of tech.</p>
+                        </div>
 
-                    echo '<table align="left" cellspacing="5" cellpadding="8">
-	                       <tr>
-		                      <td align="center"><b>Research I.D.</b></td>
-		                      <td align="center"><b>Research Authors</b></td>
-		                      <td align="center"><b>Research Publish Date</b></td>
-		                      <td align="center"><b>Research Title</b></td>
-                                <td align="center"><b>Research Journal</b></td>
-                                <td align="center"><b>Research Link</b></td>
-	                       </tr>';
+                        <div id="content-main-links">
 
-                    // mysqli_fetch_array will return a row of data from the query
-                    // until no further data is available
-                        while($row = mysqli_fetch_array($response)){
+                            <div id="university-link">
+                                <a href="https://www.uwec.edu/profiles/gomesr/" target="_blank">
+                                    University Profile
+                                </a>
+                            </div>
 
-                            echo '<tr><td align="center">' . 
-                                $row['Id'] . '</td><td align="center">' .
-                                $row['writers'] . '</td><td align="center">' . 
-                                $row['publishDate'] . '</td><td align="center">' .
-                                $row['title'] . '</td><td align="center">'.
-                                $row['journal'] . '</td><td align="center"> <a href=</a>'.
-                                $row['link'] . '</td>';
-                        }
+                            <div id="google-scholar-link">
+                                <a href="https://scholar.google.com/citations?user=s2LUBTQAAAAJ&hl=en" target="_blank">
+                                    Google Scholar
+                                    <img id="google-scholar" src="images/google-scholar-icon.png">
+                                </a>
+                            </div>
 
-                        echo '</table>';
+                            <div id="web-of-science-link">
+                                <a href="https://www.webofscience.com/wos/author/record/Z-4475-2019" target="_blank">
+                                    Web of Science
+                                </a>
+                            </div>
 
-                } else {
+                            <div id="linkedin-link">
+                                <a href="https://www.linkedin.com/in/rahul-gomes/" target="_blank">
+                                    LinkedIn
+                                    <img id="linkedin" src="images/linkedin-icon.png">
+                                </a>
+                            </div>
 
-                    echo "Couldn't issue database query<br />";
+                        </div>
 
-                    echo mysqli_error($dbc);
+                        <h2>Contact</h2>
 
-                    }
-                ?>
+                        <div id="content-main-contact">
+
+                            <ul>
+                                <li>
+                                    <p>Office Phone: <b>715-836-3395</b></p>
+                                </li>
+                                <li><a href="mailto:gomesr@uwec.edu">Email Me</a></li>
+                            </ul>
+
+                        </div>
+
+                        <button id="download-cv">Download CV</button>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </content>
@@ -203,7 +210,6 @@
                         <li><a href="https://www.uwec.edu/profiles/gomesr/" target="_blank">University Profile</a></li>
                         <li><a href="https://scholar.google.com/citations?user=s2LUBTQAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></li>
                         <li><a href="https://www.webofscience.com/wos/author/record/Z-4475-2019" target="_blank">Web of Science Profile</a></li>
-
                     </ul>
 
                 </div>

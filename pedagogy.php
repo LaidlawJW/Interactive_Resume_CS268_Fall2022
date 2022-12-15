@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
-    <link rel="icon" type="image/x-icon" href="images/graphicon.png">
+    <title>Pedagogy</title>
+    <link rel="icon" type="image/x-icon" href="images/classicon.png">
     <link rel="stylesheet" href="css/global.css">
     <script src="javascript/global.js" defer></script>
     <style>
@@ -38,8 +38,8 @@
                 <ul>
                     <li><a href="students.php">STUDENTS</a></li>
                     <li><a href="posts.php">POSTS</a></li>
-                    <li><a href="pedagogy.php">PEDAGOGY</a></li>
-                    <li><a href="research.php" class="active">RESEARCH</a></li>
+                    <li><a href="pedagogy.php" class="active">PEDAGOGY</a></li>
+                    <li><a href="research.php">RESEARCH</a></li>
                     <li><a href="aboutme.php">ABOUT ME</a></li>
                     <li><a href="homepage.php">HOME</a></li>
                 </ul>
@@ -77,11 +77,11 @@
 
             <div id="header-container">
 
-                <h1>Research</h1>
+                <h1>Pedagogy</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>Published work.</h3>
+                <h3>My history as a teacher</h3>
 
             </div>
 
@@ -96,24 +96,13 @@
 
             <div id="content-main">
 
-                <h2>Research from Dr.Gomes and many others</h2>
-
-                <form name="myForm" action="research.php" onsubmit="return validateResearchForm()" method="post" required>
-                    <h1><u>Enter a new research item:</u></h1><br>
-                    <h2><b>Enter research authors: </b><input type="text" name="writers"><br><br>
-                        <b>Enter research publication date: </b><input type="text" name="publishDate"><br><br>
-                        <b>Enter research publication title: </b><input type="text" name="title"><br><br>
-                        <b>Enter research publication journal: </b><input type="text" name="journal"><br><br>
-                        <b>Enter research publication link: </b><input type="text" name="link"><br><br>
-                        <input type="submit">
-                    </h2>
-                </form>
+                <h1>Courses I've taught</h1>
 
                 <?php
                     require_once("sql_conn.php");
                     // Printing the existing data
                     // Create a query for the database
-                    $query = "SELECT * FROM research";
+                    $query = "SELECT * FROM courses";
 
                     // Get a response from the database by sending the connection
                     // and the query
@@ -124,12 +113,11 @@
 
                     echo '<table align="left" cellspacing="5" cellpadding="8">
 	                       <tr>
-		                      <td align="center"><b>Research I.D.</b></td>
-		                      <td align="center"><b>Research Authors</b></td>
-		                      <td align="center"><b>Research Publish Date</b></td>
-		                      <td align="center"><b>Research Title</b></td>
-                                <td align="center"><b>Research Journal</b></td>
-                                <td align="center"><b>Research Link</b></td>
+		                      <td align="center"><b>Entry I.D.</b></td>
+		                      <td align="center"><b>Institution</b></td>
+		                      <td align="center"><b>Course I.D.</b></td>
+		                      <td align="center"><b>Course Title</b></td>
+                                <td align="center"><b>Semester</b></td>
 	                       </tr>';
 
                     // mysqli_fetch_array will return a row of data from the query
@@ -138,25 +126,26 @@
 
                             echo '<tr><td align="center">' . 
                                 $row['Id'] . '</td><td align="center">' .
-                                $row['writers'] . '</td><td align="center">' . 
-                                $row['publishDate'] . '</td><td align="center">' .
-                                $row['title'] . '</td><td align="center">'.
-                                $row['journal'] . '</td><td align="center"> <a href=</a>'.
-                                $row['link'] . '</td>';
+                                $row['institution'] . '</td><td align="center">' . 
+                                $row['course_id'] . '</td><td align="center">' .
+                                $row['course_title'] . '</td><td align="center">'.
+                                $row['semester'] . '</td>';
                         }
 
                         echo '</table>';
 
                 } else {
 
-                    echo "Couldn't issue database query<br />";
+                echo "Couldn't issue database query<br />";
 
                     echo mysqli_error($dbc);
 
                     }
+
+                    // Close connection
+                    mysqli_close($dbc); 
                 ?>
             </div>
-
         </content>
         <!--------------------------------------------------------------------->
 

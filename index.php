@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
-    <link rel="icon" type="image/x-icon" href="images/graphicon.png">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="images/codeicon.png">
     <link rel="stylesheet" href="css/global.css">
     <script src="javascript/global.js" defer></script>
-    <style>
-        table {
-            border-collapse: separate;
-            border: 2px solid black;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -39,9 +32,9 @@
                     <li><a href="students.php">STUDENTS</a></li>
                     <li><a href="posts.php">POSTS</a></li>
                     <li><a href="pedagogy.php">PEDAGOGY</a></li>
-                    <li><a href="research.php" class="active">RESEARCH</a></li>
+                    <li><a href="research.php">RESEARCH</a></li>
                     <li><a href="aboutme.php">ABOUT ME</a></li>
-                    <li><a href="homepage.php">HOME</a></li>
+                    <li><a href="homepage.php" class="active">HOME</a></li>
                 </ul>
 
                 <div id="menu-button-container">
@@ -77,11 +70,11 @@
 
             <div id="header-container">
 
-                <h1>Research</h1>
+                <h1>Rahul Gomes</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>Published work.</h3>
+                <h3>Professor of Computer Science, Ph.D.</h3>
 
             </div>
 
@@ -92,69 +85,13 @@
 
 
         <!------------------------------ Content ------------------------------>
-        <content id="site-content">
+        <content id="site-content" class="work-in-progress">
 
             <div id="content-main">
 
-                <h2>Research from Dr.Gomes and many others</h2>
+                <h1>Page is currently under construction. Please visit at a
+                    later time.</h1>
 
-                <form name="myForm" action="research.php" onsubmit="return validateResearchForm()" method="post" required>
-                    <h1><u>Enter a new research item:</u></h1><br>
-                    <h2><b>Enter research authors: </b><input type="text" name="writers"><br><br>
-                        <b>Enter research publication date: </b><input type="text" name="publishDate"><br><br>
-                        <b>Enter research publication title: </b><input type="text" name="title"><br><br>
-                        <b>Enter research publication journal: </b><input type="text" name="journal"><br><br>
-                        <b>Enter research publication link: </b><input type="text" name="link"><br><br>
-                        <input type="submit">
-                    </h2>
-                </form>
-
-                <?php
-                    require_once("sql_conn.php");
-                    // Printing the existing data
-                    // Create a query for the database
-                    $query = "SELECT * FROM research";
-
-                    // Get a response from the database by sending the connection
-                    // and the query
-                    $response = @mysqli_query($dbc, $query);
-
-                    // If the query executed properly proceed
-                    if($response){
-
-                    echo '<table align="left" cellspacing="5" cellpadding="8">
-	                       <tr>
-		                      <td align="center"><b>Research I.D.</b></td>
-		                      <td align="center"><b>Research Authors</b></td>
-		                      <td align="center"><b>Research Publish Date</b></td>
-		                      <td align="center"><b>Research Title</b></td>
-                                <td align="center"><b>Research Journal</b></td>
-                                <td align="center"><b>Research Link</b></td>
-	                       </tr>';
-
-                    // mysqli_fetch_array will return a row of data from the query
-                    // until no further data is available
-                        while($row = mysqli_fetch_array($response)){
-
-                            echo '<tr><td align="center">' . 
-                                $row['Id'] . '</td><td align="center">' .
-                                $row['writers'] . '</td><td align="center">' . 
-                                $row['publishDate'] . '</td><td align="center">' .
-                                $row['title'] . '</td><td align="center">'.
-                                $row['journal'] . '</td><td align="center"> <a href=</a>'.
-                                $row['link'] . '</td>';
-                        }
-
-                        echo '</table>';
-
-                } else {
-
-                    echo "Couldn't issue database query<br />";
-
-                    echo mysqli_error($dbc);
-
-                    }
-                ?>
             </div>
 
         </content>
@@ -213,9 +150,7 @@
                     <h4><u>Contact</u></h4>
 
                     <ul>
-                        <li>
-                            <p>Office Phone: <b>715-836-3395</b></p>
-                        </li>
+                        <li><b>Office Phone: </b>715-836-3395</li>
                         <li><a href="mailto:gomesr@uwec.edu">Email Me</a></li>
                     </ul>
 
