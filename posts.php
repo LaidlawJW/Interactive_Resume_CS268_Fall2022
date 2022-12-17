@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts</title>
-    <link rel="icon" type="image/x-icon" href="images/classicon.png" alt="favicon">
+    <link rel="icon" type="image/x-icon" href="images/classicon.png" alt="Favicon">
     <link rel="stylesheet" href="css/global.css">
     <script src="js/global.js" defer></script>
     <style>
@@ -46,7 +46,7 @@
 
                 <div id="menu-button-container">
                     <button id="menu-button">
-                        <img id="threeline" src="images/threeline.png" alt="three line icon">
+                        <img id="threeline" src="images/threeline.png" alt="Three Line Icon">
                     </button>
                 </div>
 
@@ -79,7 +79,7 @@
 
                 <h1>Posts</h1>
 
-                <img id="green-line" src="images/greenline.png" alt="dividing line">
+                <img id="green-line" src="images/greenline.png" alt="Dividing Line">
 
                 <h3>Updates from me</h3>
 

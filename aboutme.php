@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="icon" type="image/x-icon" href="images/codeicon.png" alt="favicon">
+    <link rel="icon" type="image/x-icon" href="images/codeicon.png" alt="Favicon">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/aboutme.css">
     <script src="js/global.js" defer></script>
@@ -34,7 +34,7 @@
                 </ul>
                 <div id="menu-button-container">
                     <button id="menu-button">
-                        <img id="threeline" src="images/threeline.png" alt="three line icon">
+                        <img id="threeline" src="images/threeline.png" alt="Three Line Icon">
                     </button>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         <header id="site-header" title="greeting">
             <div id="header-container">
                 <h1>About Me</h1>
-                <img id="green-line" src="images/greenline.png" alt="dividing line">
+                <img id="green-line" src="images/greenline.png" alt="Dividing Line">
                 <h3>Professor of Computer Science, Ph.D.</h3>
             </div>
         </header>
@@ -65,7 +65,7 @@
             <div id="content-main">
                 <div id="content-main-row">
                     <div id="content-main-img">
-                        <img id="gomes-portrait" src="images/gomesportrait.jpg" alt="professor gomes portrait">
+                        <img id="gomes-portrait" src="images/gomesportrait.jpg" alt="Professor Gomes Portrait">
                     </div>
 
                     <div id="content-main-info">
@@ -118,7 +118,7 @@
                         </div>
                         <div id="download-cv-container">
                             <a id="download-cv" href="gomescv.pdf" target="_blank" download>
-                                DOWNLOAD CV <img id="download-img" src="images/download.png" alt="download icon">
+                                DOWNLOAD CV <img id="download-img" src="images/download.png" alt="Download Icon">
                             </a>
                         </div>
                     </div>

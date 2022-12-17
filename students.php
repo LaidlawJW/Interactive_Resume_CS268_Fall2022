@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
-    <link rel="icon" type="image/x-icon" href="images/studenticon.png">
+    <link rel="icon" type="image/x-icon" href="images/studenticon.png" alt="Favicon">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/students.css">
     <script src="js/global.js" defer></script>
