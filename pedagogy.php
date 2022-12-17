@@ -8,7 +8,7 @@
     <title>Pedagogy</title>
     <link rel="icon" type="image/x-icon" href="images/classicon.png">
     <link rel="stylesheet" href="css/global.css">
-    <script src="javascript/global.js" defer></script>
+    <script src="js/global.js" defer></script>
     <style>
         table {
             border-collapse: separate;
@@ -22,7 +22,7 @@
     <div class="page">
 
         <button id="top-button">
-            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="top">
+            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="Up Caret">
         </button>
 
         <!------------------------------ Navbar ------------------------------->
@@ -46,7 +46,7 @@
 
                 <div id="menu-button-container">
                     <button id="menu-button">
-                        <img id="threeline" src="images/threeline.png" alt="three line icon">
+                        <img id="threeline" src="images/threeline.png" alt="Three Line Icon">
                     </button>
                 </div>
 
@@ -79,7 +79,7 @@
 
                 <h1>Pedagogy</h1>
 
-                <img id="green-line" src="images/greenline.png" alt="dividing line">
+                <img id="green-line" src="images/greenline.png" alt="Dividing Line">
 
                 <h3>My history as a teacher</h3>
 

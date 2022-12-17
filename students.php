@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/studenticon.png">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/students.css">
-    <script src="javascript/global.js" defer></script>
+    <script src="js/global.js" defer></script>
 
 </head>
 
@@ -17,7 +17,7 @@
     <div class="page">
 
         <button id="top-button">
-            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="top">
+            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="Up Caret">
         </button>
 
         <!------------------------------ Navbar ------------------------------->
@@ -41,7 +41,7 @@
 
                 <div id="menu-button-container">
                     <button id="menu-button">
-                        <img id="threeline" src="images/threeline.png" alt="three line icon">
+                        <img id="threeline" src="images/threeline.png" alt="Three Line Icon">
                     </button>
                 </div>
 
@@ -74,7 +74,7 @@
 
                 <h1>Students</h1>
 
-                <img id="green-line" src="images/greenline.png" alt="dividing line">
+                <img id="green-line" src="images/greenline.png" alt="Dividing Line">
 
                 <h3>My students assisting the UWEC computer science program.</h3>
 
@@ -95,7 +95,7 @@
                 <!---------------------- Connor Kamrowski --------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="connor-k" src="images/connorkamrowski.jpg"></div>
+                    <div class="student-infocard-img"><img id="connor-k" src="images/connorkamrowski.jpg" alt="Connor K Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -132,7 +132,7 @@
                 <!---------------------- Connor McKeown ----------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="connor-m" src="images/connormckeown.jpg"></div>
+                    <div class="student-infocard-img"><img id="connor-m" src="images/connormckeown.jpg" alt="Connor M Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -169,7 +169,7 @@
                 <!----------------------- Laney Ruehmann ----------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="lany-r" src="images/laneyruehmann.jpg"></div>
+                    <div class="student-infocard-img"><img id="lany-r" src="images/laneyruehmann.jpg" alt="Laney R Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -206,7 +206,7 @@
                 <!---------------------- Jordan Langlois ---------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="jordan-l" src="images/jordanlanglois.jpg"></div>
+                    <div class="student-infocard-img"><img id="jordan-l" src="images/jordanlanglois.jpg" alt="Jordan L Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -243,7 +243,7 @@
                 <!----------------------- Keller Paige  ----------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="keller-p" src="images/kellerpaige.jpg"></div>
+                    <div class="student-infocard-img"><img id="keller-p" src="images/kellerpaige.jpg" alt="Keller P Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -280,7 +280,7 @@
                 <!--------------------- Ashleigh Kroschel --------------------->
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="asheligh-k" src="images/ashleighkroschel.jpg"></div>
+                    <div class="student-infocard-img"><img id="asheligh-k" src="images/ashleighkroschel.jpg" alt="Ashleigh K Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -317,7 +317,7 @@
                 <!------------------------ Zhongyue Yu ------------------------>
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="zhongyue-y" src="images/zhongyueyu.jpg"></div>
+                    <div class="student-infocard-img"><img id="zhongyue-y" src="images/zhongyueyu.jpg" alt="Zhongyue Y Picture"></div>
 
                     <div class="student-infocard-main">
 
@@ -354,7 +354,7 @@
                 <!------------------------ Kaia Hansen ------------------------>
                 <div class="student-infocard">
 
-                    <div class="student-infocard-img"><img id="kaia-h" src="images/kaiahansen.jpg"></div>
+                    <div class="student-infocard-img"><img id="kaia-h" src="images/kaiahansen.jpg" alt="Kaia H Picture"></div>
 
                     <div class="student-infocard-main">
 
