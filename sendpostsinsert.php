@@ -22,7 +22,7 @@
     <div class="page">
 
         <button id="top-button">
-            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="top">
+            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="Up Caret">
         </button>
 
         <!------------------------------ Navbar ------------------------------->

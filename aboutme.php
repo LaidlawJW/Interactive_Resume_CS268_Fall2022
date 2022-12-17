@@ -15,7 +15,7 @@
 <body>
     <div class="page">
         <button id="top-button">
-            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="top">
+            <img id="white-caret-up" src="images/whitecaretup.png" title="Go to Top" alt="Up Caret">
         </button>
         <!------------------------------ Navbar ------------------------------->
         <nav id="site-nav">
@@ -65,7 +65,7 @@
             <div id="content-main">
                 <div id="content-main-row">
                     <div id="content-main-img">
-                        <img id="gomes-portrait" src="images/gomesportrait.jpg">
+                        <img id="gomes-portrait" src="images/gomesportrait.jpg" alt="professor gomes portrait">
                     </div>
 
                     <div id="content-main-info">
@@ -118,7 +118,7 @@
                         </div>
                         <div id="download-cv-container">
                             <a id="download-cv" href="gomescv.pdf" target="_blank" download>
-                                DOWNLOAD CV <img id="download-img" src="images/download.png">
+                                DOWNLOAD CV <img id="download-img" src="images/download.png" alt="download icon">
                             </a>
                         </div>
                     </div>
