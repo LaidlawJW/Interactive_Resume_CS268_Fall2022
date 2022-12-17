@@ -85,12 +85,13 @@ body {
     display: block;
     float: right;
     color: white;
-    transition: background-color 0.6s, opacity 0.33s, font-size .33s;
+    transition: color 0.6s, background-color 0.6s, opacity 0.33s, font-size .33s;
 }
 
 /* Nav links change color when cursor hovers over them */
 #nav-container > ul > li a:hover {
     background-color: rgb(50, 223, 125);
+    color: black;
 }
 
 #menu-button-container {
@@ -228,22 +229,6 @@ body {
         opacity: 100%;
     }
 }
-
-@keyframes appear {
-    0% {
-        visibility: hidden;
-        opacity: 0%;
-    }
-
-    50% {
-        visibility: visible;
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 80%;
-    }
-}
 /* -------------------------- */
 
 /* -------------------------------------------------------------------------- */
@@ -259,12 +244,11 @@ body {
     height: fit-content;
     display: flex;
     justify-content: center;
-    vertical-align: middle;
+    align-items: center;
 }
 
 #content-main {
     width: 1536px;
-    min-height: 1000px;
     height: fit-content;
 }
 
@@ -275,13 +259,12 @@ body {
 
 /* Styling for content sections of pages that are incomplete */
 .work-in-progress {
+    min-height: 700px !important;
     background: radial-gradient(circle at center, rgb(75, 75, 75), black 200%);
 }
 
 .work-in-progress > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .work-in-progress > div > h1 {
@@ -317,38 +300,37 @@ body {
 
 #footer-main > div {
     height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #footer-main > div > p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(161, 161, 161);
     font-size: 95%;
 }
 
 #footer-main > div > h4 {
+    font-size: large;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(219, 219, 219);
     width: 300px;
+    margin: 0;
 }
 
 #footer-main > div > ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    width: 70%;
 }
 
 #footer-main > div > ul > li > p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 95%;
 }
 
 #footer-main > div > ul > li > a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 95%;
     color: rgb(102, 180, 190);
     text-decoration: none;
+    transition: 0.5s;
 }
 
 #footer-main > div > ul > li > a:hover {
@@ -358,7 +340,6 @@ body {
 
 #footer-main > div > ul > li > a:visited {
     color: rgb(125, 22, 173);
-    transition: 0.5s;
 }
 
 /* - Infocard 1 Styling - */
@@ -372,12 +353,8 @@ body {
 }
 
 /* - Footer Nav Styling - */
-#footer-nav {
-    width: fit-content;
-}
-
-#footer-nav > ul > li {
-    padding: 5px 0px;
+#footer-links > ul > li {
+    padding: 3px 0px;
 }
 
 /* -- Contact Block Styling -- */
@@ -425,7 +402,7 @@ body {
 
 
 /* Make navbar collapse and show threeline.png at 1050px window width */
-@media (max-width: 1050px) {
+@media (max-width: 950px) {
 
     .active {
         background-color: rgb(46,139,87);
@@ -444,7 +421,7 @@ body {
 }
 
 /* Navbar menu automatically collapses if screen width is enlarged past 1050px */
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
 
     #nav-popup {
         height: 0px !important;
