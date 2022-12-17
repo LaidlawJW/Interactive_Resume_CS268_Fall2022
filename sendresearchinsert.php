@@ -1,14 +1,20 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="images/codeicon.png" alt="favicon">
+    <title>Research</title>
+    <link rel="icon" type="image/x-icon" href="images/graphicon.png" alt="favicon">
     <link rel="stylesheet" href="css/global.css">
     <script src="js/global.js" defer></script>
+    <style>
+        table {
+            border-collapse: separate;
+            border: 2px solid black;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -32,9 +38,9 @@
                     <li><a href="students.php">STUDENTS</a></li>
                     <li><a href="posts.php">POSTS</a></li>
                     <li><a href="pedagogy.php">PEDAGOGY</a></li>
-                    <li><a href="research.php">RESEARCH</a></li>
+                    <li><a href="research.php" class="active">RESEARCH</a></li>
                     <li><a href="aboutme.php">ABOUT ME</a></li>
-                    <li><a href="homepage.php" class="active">HOME</a></li>
+                    <li><a href="homepage.php">HOME</a></li>
                 </ul>
 
                 <div id="menu-button-container">
@@ -70,11 +76,11 @@
 
             <div id="header-container">
 
-                <h1>Rahul Gomes</h1>
+                <h1>Research</h1>
 
                 <img id="green-line" src="images/greenline.png" alt="dividing line">
 
-                <h3>Professor of Computer Science, Ph.D.</h3>
+                <h3>Published work.</h3>
 
             </div>
 
@@ -85,13 +91,30 @@
 
 
         <!------------------------------ Content ------------------------------>
-        <content id="site-content" class="work-in-progress">
+        <content id="site-content">
 
             <div id="content-main">
 
-                <h1>Page is currently under construction. Please visit at a
-                    later time.</h1>
-
+                <?php
+                    require_once("sql_conn.php");
+                
+                    // Insert data from edit page
+                    $writers =  $_REQUEST["writers"];
+                    $publishDate = $_REQUEST["publishDate"];
+                    $title =  $_REQUEST["title"];
+                    $journal =  $_REQUEST["journal"];
+                    $link =  $_REQUEST["link"];
+         
+                    // Performing insert query execution
+                    $sqlquery = "INSERT INTO research (writers, publishDate, title, journal, link) VALUES ('$writers', '$publishDate', '$title', '$journal', '$link')";
+        
+                    if ($dbc->query($sqlquery) === TRUE) {
+                        echo "New data inserted successfully";
+                    } else {
+                        echo "Error: " . $sqlquery . "<br>" . $dbc->error;
+                    }
+                
+                ?>
             </div>
 
         </content>
@@ -150,7 +173,9 @@
                     <h4><u>Contact</u></h4>
 
                     <ul>
-                        <li><b>Office Phone: </b>715-836-3395</li>
+                        <li>
+                            <p>Office Phone: <b>715-836-3395</b></p>
+                        </li>
                         <li><a href="mailto:gomesr@uwec.edu">Email Me</a></li>
                     </ul>
 
