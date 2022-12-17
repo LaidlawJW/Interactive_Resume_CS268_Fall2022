@@ -97,56 +97,24 @@
             <div id="content-main">
 
                 <h2>Posts</h2>
-                <input type="button" onclick="window.location.href = 'createPost.php';" value="Manage Posts" /><br>
+
                 <!--This is printing the database-->
                 <?php
                     require_once("sql_conn.php");
                 
-                    // Printing the existing data
-                    // Create a query for the database
-                    $query = "SELECT * FROM posts";
-
-                    // Get a response from the database by sending the connection
-                    // and the query
-                    $response = @mysqli_query($dbc, $query);
-
-                    // If the query executed properly proceed
-                    if($response){
-
-                    echo '<table align="left" cellspacing="5" cellpadding="8">
-	                       <tr>
-		                      <td align="center"><b>Post I.D.</b></td>
-		                      <td align="center"><b>Post Title</b></td>
-		                      <td align="center"><b>Post Text</b></td>
-	                       </tr>';
-
-                    // mysqli_fetch_array will return a row of data from the query
-                    // until no further data is available
-                        while($row = mysqli_fetch_array($response)){
-
-                            echo '<tr><td align="center">' . 
-                            $row['Id'] . '</td><td align="center">' .
-                            $row['title'] . '</td><td align="center">' . 
-                            $row['content'] . '</td>' ;
-                        }
-
-                        echo '</table>';
-
-                } else {
-
-                    echo "Couldn't issue database query<br />";
-
-                    echo mysqli_error($dbc);
-
-                }
-                
-                // Close connection
-                mysqli_close($dbc); 
+                    // Insert data from edit page
+                    $title =  $_POST["title"];
+                    $text = $_POST["content"];
+         
+                    // Performing insert query execution
+                    $sqlquery = "INSERT INTO posts (title, content) VALUES ('$title', '$text')";
+        
+                    if ($dbc->query($sqlquery) === TRUE) {
+                        echo "New post created successfully";
+                    } else {
+                        echo "Error: " . $sqlquery . "<br>" . $dbc->error;
+                    }
                 ?>
-
-                <div id="posts">
-
-                </div>
 
             </div>
 

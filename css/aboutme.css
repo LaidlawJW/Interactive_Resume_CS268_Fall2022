@@ -26,7 +26,7 @@
 
 #content-main-img::before {
     content: "";
-    background-color: rgb(139,46,98);
+    background-color: rgb(139, 46, 98);
     position: absolute;
     height: 200px;
     width: 200px;
@@ -41,7 +41,7 @@
     position: absolute;
     height: 180px;
     width: 120px;
-    border: 3px solid rgb(139,46,98);
+    border: 3px solid rgb(139, 46, 98);
     border-radius: 6px;
     bottom: -25px;
     left: 25px;
@@ -92,7 +92,7 @@
 #content-main-links > div {
     height: 30px;
     width: 110px;
-    background-color: rgb(139,46,98);
+    background-color: rgb(139, 46, 98);
     border: 3px solid black;
     border-radius: 10px;
 }
@@ -124,7 +124,7 @@
 }
 
 #download-img {
-    filter: invert(100%); 
+    filter: invert(100%);
     width: 15px;
     object-fit: contain;
 }
@@ -164,10 +164,11 @@
 #content-main-contact > ul > li > a:visited {
     color: rgb(125, 22, 173);
 }
+
 /* ------------------------------- */
 
 #download-cv-container {
-    background-color: rgb(139,46,98);
+    background-color: rgb(139, 46, 98);
     border-radius: 5px;
 }
 
