@@ -397,26 +397,30 @@
 
         <!------------------------------ Footer ------------------------------->
         <footer id="site-footer">
-
+            
             <div id="footer-main">
 
                 <div id="footer-infocard1">
 
-                    <h4><u>Honoring Indigenous Peoples</u></h4>
+                    <h4>Honoring Indigenous Peoples</h4>
+    
+                    <hr>
 
                     <p>
                         "I acknowledge that the University of Wisconsin-Eau Claire
                         occupies the sacred and ancestral land of the Indigenous
                         Peoples. I honor the land of the Ojibwe and Dakota Nations."
                     </p>
-
+    
                 </div>
-
+    
                 <div id="footer-infocard2">
-
+    
                     <h4>
-                        <u>Proud Representative of the<br>University of Wisconsin-Eau Claire</u>
+                        Proud Representative
                     </h4>
+        
+                    <hr>
 
                     <p>
                         Rahul Gomes is an exceptionally established member of
@@ -424,39 +428,41 @@
                         dedication to his craft and excellence has introduced
                         many notable ideas to the field of computer science.
                     </p>
-
+    
                 </div>
-
-                <div id="footer-nav">
-
-                    <h4><u>External Links</u></h4>
+    
+                <div id="footer-links">
+    
+                    <h4>External Links</h4>
+    
+                    <hr>
 
                     <ul>
                         <li><a href="https://www.uwec.edu/profiles/gomesr/" target="_blank">University Profile</a></li>
                         <li><a href="https://scholar.google.com/citations?user=s2LUBTQAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></li>
                         <li><a href="https://www.webofscience.com/wos/author/record/Z-4475-2019" target="_blank">Web of Science Profile</a></li>
-
                     </ul>
-
+    
                 </div>
-
+    
                 <div id="footer-contact">
-
-                    <h4><u>Contact</u></h4>
+    
+                    <h4>Contact</h4>
+    
+                    <hr>
 
                     <ul>
-                        <li>
-                            <p>Office Phone: <b>715-836-3395</b></p>
-                        </li>
+                        <li>Office Phone: <b>715-836-3395</b></li>
                         <li><a href="mailto:gomesr@uwec.edu">Email Me</a></li>
                     </ul>
-
+    
                 </div>
 
             </div>
 
         </footer>
         <!--------------------------------------------------------------------->
+        
     </div>
 </body>
 

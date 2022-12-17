@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+#content-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contains all visible objects in content box */
+#content-main-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1344px;
+    height: 540px;
+    padding: 30px 0px 30px 0px;
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+/* Div containing gomesportrait.jpg */
+#content-main-img {
+    display: flex;
+    position: relative;
+    padding: 0px 50px 0px 50px;
+}
+
+#content-main-img::before {
+    content: "";
+    background-color: rgb(139,46,98);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: -30px;
+    right: 20px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+#content-main-img::after {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 120px;
+    border: 3px solid rgb(139,46,98);
+    border-radius: 6px;
+    bottom: -25px;
+    left: 25px;
+    z-index: 1;
+}
+
+#gomes-portrait {
+    width: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Contains all textual and interactive info */
+#content-main-info {
+    padding: 0px 50px 0px 20px;
+    width: 754px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-header > h1 {
+    margin: 0;
+}
+
+#content-main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------- LINKS ----------- */
+#content-main-links {
+    display: grid;
+    height: fit-content;
+    width: inherit;
+    grid-template-areas:
+        "a b c d";
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#content-main-links > div {
+    height: 30px;
+    width: 110px;
+    background-color: rgb(139,46,98);
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#content-main-links > div > a {
+    margin: auto;
+    padding: 0px 3px 0px 3px;
+    height: inherit;
+    width: inherit - 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+#content-main-links > div > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#link-text {
+    text-align: center;
+    font-weight: 500;
+    height: inherit;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+#download-img {
+    filter: invert(100%); 
+    width: 15px;
+    object-fit: contain;
+}
+
+/* ----------------------------- */
+
+/* ----------- CONTACT ----------- */
+#content-main-contact {
+    height: fit-content;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+#content-main-contact > h2 {
+    margin: 0;
+}
+
+#content-main-contact > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#content-main-contact > ul > li:not(:last-child) {
+    margin-bottom: -10px;
+}
+
+#content-main-contact > ul > li > a {
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+#content-main-contact > ul > li > a:hover {
+    color: rgba(0, 0, 0, 0.692);
+}
+
+#content-main-contact > ul > li > a:visited {
+    color: rgb(125, 22, 173);
+}
+/* ------------------------------- */
+
+#download-cv-container {
+    background-color: rgb(139,46,98);
+    border-radius: 5px;
+}
+
+/* CV download button */
+#download-cv {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 120px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+
+#download-cv:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 1310px) {
+
+    #content-main-row {
+        width: 900;
+    }
+
+    #gomes-portrait {
+        width: 250px;
+    }
+
+    #content-main-img::before {
+        width: 150px;
+        height: 150px;
+        top: -20px;
+        right: 30px;
+    }
+
+    #content-main-img::after {
+        height: 135px;
+        width: 90px;
+        bottom: -20px;
+        left: 30px;
+    }
+
+    #content-main-info {
+        width: 500px;
+    }
+
+}
+
+/* Restructures content for a vertical fit */
+@media (max-width: 920px) {
+
+    #content-main-row {
+        flex-direction: column;
+        height: fit-content;
+        width: 400px;
+    }
+
+    #content-main-info {
+        padding: 40px 0px 0px 0px;
+        width: 370px;
+    }
+
+    #content-main-text {
+        width: 320px;
+    }
+
+    #content-main-links {
+        grid-template-areas:
+            "a b"
+            "c d";
+        row-gap: 10px;
+    }
+
+}
