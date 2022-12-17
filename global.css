@@ -1,0 +1,459 @@
+/* Styling for main body of the page */
+body, html, #page {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth fade-in load effect for the page */
+body {
+    /* See "Header Styling" for animation details */
+    animation: fade-in ease 0.7s;
+}
+
+/* --------------------------------------- */
+
+/* ----------------------------- Navbar Styling ----------------------------- */
+
+/* Current page's tab in navbar has different background color */
+.active {
+    background-color: rgb(29, 99, 59)
+}
+
+#site-nav {
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    /* Remains displayed in front of other elements */
+    z-index: 99;
+}
+
+#nav-container {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    background-color: rgb(46,139,87);
+}
+
+#book {
+    float: left;
+    width: 70px;
+    height: inherit;
+    z-index: 99;
+}
+
+#nav-text-container {
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+/* Affects text labels of navbar that aren't links */
+#nav-text-container > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 130%;
+    font-weight: bolder;
+    width: auto;
+    height: inherit;
+    padding: 5px 5px;
+    margin: 0;
+    position: absolute;
+    left: 75px;
+}
+
+/* The list of stuff on the right side of navbar */
+#nav-container > ul {
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+}
+
+/* Nav links */
+#nav-container > ul > li > a {
+    font-family: "Montserrat",sans-serif;
+    font-size: 95%;
+    text-rendering: optimizeLegibility;
+    height: 20px;
+    line-height: 20px;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    float: right;
+    color: white;
+    transition: color 0.6s, background-color 0.6s, opacity 0.33s, font-size .33s;
+}
+
+/* Nav links change color when cursor hovers over them */
+#nav-container > ul > li a:hover {
+    background-color: rgb(50, 223, 125);
+    color: black;
+}
+
+#menu-button-container {
+    display: flex;
+}
+
+#menu-button {
+    padding: 0;
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#menu-button:hover {
+    background-color: rgb(50, 223, 125);
+    transition: 0.8s;
+}
+
+#threeline {
+    filter: invert(100%); 
+    height: 50px;
+    width: 0px;
+    float: right;
+    opacity: 0%;
+    transition: width .75s, opacity 1s;
+}
+
+#nav-popup {
+    background-color: rgb(46,139,87);
+    top: 50px;
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    z-index: 99;
+    overflow: hidden;
+    transition: height 0.6s;
+}
+
+.nav-menu-container:first-child {
+    border-top: 1px solid black;
+}
+
+.nav-menu-container {
+    height: auto;
+    background-color: rgb(39, 39, 39);
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+#nav-popup > div > a {
+    float: left;
+    height: 100%;
+    line-height: 49px;
+    width: 100%;
+    font-family: "Montserrat",sans-serif;
+    font-size: 95%;
+    padding-left: 50px;
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+#nav-popup > div > a:hover {
+    color: rgb(50, 223, 125);
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------- Header Styling ----------------------------- */
+
+#site-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../images/compwallpaper.jpg');
+    background-size: 150% auto;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-container > h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    animation-duration: 2s, 2s;
+    animation-name: slide-in, fade-in;
+    animation-fill-mode: forwards;
+}
+
+#header-container > h3 {
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    animation-name: appear, slide-in;
+    animation-duration: 2s, 2s;
+    animation-fill-mode: forwards, forwards;
+}
+
+#green-line {
+    animation-duration: 2s;
+    animation-name: fade-in;
+    height: 20px;
+    width: 300px;
+}
+
+@keyframes slide-in {
+    from {
+        margin-bottom: 80px;
+    }
+
+    to {
+        margin-bottom: 22px;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+/* -------------------------- */
+
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* ---------------------------- Content Section Styling ----------------------------- */
+
+#site-content {
+    min-height: 100%;
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-main {
+    width: 1536px;
+    height: fit-content;
+}
+
+#content-main > p {
+    width: auto;
+    height: auto;
+}
+
+/* Styling for content sections of pages that are incomplete */
+.work-in-progress {
+    min-height: 700px !important;
+    background: radial-gradient(circle at center, rgb(75, 75, 75), black 200%);
+}
+
+.work-in-progress > div {
+    text-align: center;
+}
+
+.work-in-progress > div > h1 {
+    color: white;
+    margin: 0;
+}
+/* ---------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------- Footer Styling ----------------------------- */
+
+#site-footer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.849);
+}
+
+#footer-main {
+    width: 1920px;
+    display: grid;
+    padding: 40px;
+    justify-content: space-around;
+    grid-template-areas:
+        "a b c d";
+}
+
+#footer-main > div {
+    height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#footer-main > div > p {
+    color: rgb(161, 161, 161);
+    font-size: 95%;
+}
+
+#footer-main > div > h4 {
+    font-size: large;
+    text-align: center;
+    color: rgb(219, 219, 219);
+    width: 300px;
+    margin: 0;
+}
+
+#footer-main > div > ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+#footer-main > div > ul > li > p {
+    font-size: 95%;
+}
+
+#footer-main > div > ul > li > a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(102, 180, 190);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#footer-main > div > ul > li > a:hover {
+    color: rgba(179, 179, 179, 0.377);
+    transition: 0.5s;
+}
+
+#footer-main > div > ul > li > a:visited {
+    color: rgb(125, 22, 173);
+}
+
+/* - Infocard 1 Styling - */
+#footer-infocard1 {
+    width: 300px;
+}
+
+/* - Infocard 2 Styling - */
+#footer-infocard2 {
+    width: 300px;
+}
+
+/* - Footer Nav Styling - */
+#footer-links > ul > li {
+    padding: 3px 0px;
+}
+
+/* -- Contact Block Styling -- */
+#footer-contact {
+    text-align: center;
+}
+
+#footer-contact > ul {
+    list-style-type: none;
+}
+
+#footer-contact > ul > li {
+    padding-top: 3px;
+    color: rgb(143, 143, 143);
+}
+
+/* -------------------------------------------------------------------------- */
+
+#top-button {
+    background-color: rgb(58, 58, 58);
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 0;
+    z-index: 99;
+    cursor: pointer;
+    transition: 0.3s linear;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+#white-caret-up {
+    width: 28px;
+    height: 28px;
+}
+
+#top-button:hover {
+    background-color: black;
+    transition: 1s;
+}
+
+
+/* Make navbar collapse and show threeline.png at 1050px window width */
+@media (max-width: 950px) {
+
+    .active {
+        background-color: rgb(46,139,87);
+    }
+
+    #nav-container > ul > li > a {
+        font-size: 0px;
+        opacity: 0%;
+        padding: 0px;
+    }
+
+    #threeline {
+        opacity: 100%;
+        width: 50px;
+    }
+}
+
+/* Navbar menu automatically collapses if screen width is enlarged past 1050px */
+@media (min-width: 950px) {
+
+    #nav-popup {
+        height: 0px !important;
+    }
+
+}
+
+/* (Kind of) Fixes navbar name overlap at minute screen widths */
+@media (max-width: 320px) {
+
+    #nav-text-container {
+        font-size: 70%;
+    }
+
+}
+
+/* --- Footer resizing --- */
+@media(max-width: 1400px) {
+    #footer-main {
+        grid-template-areas:
+            "a b"
+            "c d";
+    }
+}
+
+@media(max-width: 800px) {
+    #footer-main {
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d";
+    }
+}
+/* ----------------------- */
